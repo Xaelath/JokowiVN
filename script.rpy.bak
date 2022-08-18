@@ -1,0 +1,2268 @@
+﻿# Declare characters used by this game.
+define j = Character(_("Jokowi"), color="#e30d0d", what_prefix='"', what_suffix='"', callback=high_beep)
+define jpot = Character(_("Jokowi"), color="#e30d0d", image="jpot",  what_prefix='"', what_suffix='"', callback=high_beep)
+define jnar = Character(_("Jokowi"), color="#e30d0d", callback=high_beep)
+
+define p = Character(_("Prabowo"), color="#c48600", what_prefix='"', what_suffix='"',  callback=prabowobeep)
+
+define jkecil = Character(_("Jokowi(kecil)"), color="#AA4E4E", what_prefix='"', what_suffix='"',  callback=kecil_beep)
+define pjkue =  Character(_("Penjual"), color="#7f8a8e", what_prefix='"', what_suffix='"',  callback=arang_beep)
+define ibujokowi = Character(_("Sujiatmi"), color="#f097eb", what_prefix='"', what_suffix='"',  callback=low_beep)
+define moderator = Character(_("Moderator"), color="#fafcfa", what_prefix='"', what_suffix='"',  callback=moderatorbeep)
+
+define ahmad = Character(_("Ahmad"), color="#fafcfa", what_prefix='"', what_suffix='"',  callback=moderatorbeep)
+define ahmadpot = Character(_("Ahmad"), color="#fafcfa", image="ahmadserious", what_prefix='"', what_suffix='"',  callback=moderatorbeep)
+define ahmadpot2 = Character(_("Ahmad"), color="#fafcfa", image="ahmadspeak", what_prefix='"', what_suffix='"',  callback=moderatorbeep)
+
+define wartawan1 = Character(_("Wartawan 1"), what_prefix='"', what_suffix='"',  color="#ffffff", callback=waratawanbeep)
+define wartawan2 = Character(_("Wartawan 2"), what_prefix='"', what_suffix='"',  color="#ffffff", callback=waratawanbeep)
+define announcer = Character(_("Pengumum"), what_prefix='"', what_suffix='"',  color="#cffffc", callback=moderatorbeep)
+define gibran = Character(_("Gibran"),  what_prefix='"', what_suffix='"', color="#158d85", callback=high_beep2)
+
+define narrator = Character(None, kind=nvl, callback=narrator_beep)
+define narrator2 = Character(None, kind=nvl)
+define jstory = Character(None, kind=nvl)
+
+#define position
+transform slightleft:
+    xalign 0.25
+    yalign 1.0
+
+transform slightleft75:
+    xalign 0.25
+    yalign 0.36
+
+transform centerdebat:
+    xalign 0.5
+    yalign 0.36
+
+transform leftdebat:
+    xalign 0.0
+    yalign 0.36
+
+transform leftdebatmaju:
+    xalign 0.1
+    yalign 0.36
+
+transform rightdebat:
+    xalign 1.0
+    yalign 0.36
+
+transform rightdebatmaju:
+    xalign 0.9
+    yalign 0.36
+
+transform ahmadcenterfix:
+    xalign 0.5
+    yalign 0.38
+
+transform slightright:
+    xalign 0.75
+    yalign 1.0
+
+#define music
+define audio.wayhome = "/audio/the-way-home-6674.mp3"
+define audio.triumph = "/audio/triumphant-long-6673.mp3"
+define audio.salmon = "/audio/one-eyed-salmon-7482.mp3"
+define audio.melodyofnature = "/audio/melody-of-nature-main-6672.mp3"
+define audio.cinema_ambient = "/audio/cinematic-ambient-feeling-ambient-piano-music-for-videos-7767.mp3"
+define audio.happydays = "/audio/ambient-piano-happy-days--5541.mp3"
+define audio.indonesiaraya = "/audio/indonesiaraya.mp3"
+define audio.angel = "/audio/angel-piano-main-9625.mp3"
+define audio.simpleday = "/audio/simple-piano-melody-9834.mp3"
+define audio.lobby = "/audio/AA/1-03 Gyakuten Saiban 5 - Trial.mp3"
+define audio.question = "/audio/AA/1-04 Questioning ~ Moderato 2013.mp3"
+define audio.logic = "/audio/AA/1-05 Logic Trinity.mp3"
+define audio.objection = "/audio/AA/1-07 Phoenix Wright ~ Objection! 2013.mp3"
+define audio.question2 = "/audio/AA/1-09 Questioning ~ Allegro 2013.mp3"
+define audio.suspense = "/audio/AA/1-10 Suspense 2013.mp3"
+define audio.pursuit = "/audio/AA/1-11 Pressing Pursuit ~ Keep Pressing On.mp3"
+define audio.noisy = "/audio/AA/1-33 Noisy People.mp3"
+define audio.choice = "/audio/AA/2-07 Chains of the Heart ~ Psyche-Lock 2013.mp3"
+define audio.pursuit2 = "/audio/AA/2-16 Variation.mp3"
+define audio.enddebat = "/audio/AA/2-18 Gyakuten Saiban 5 ~ End.mp3"
+define audio.investigation = "/audio/AA/1-23 Investigation ~ Opening 2013.mp3"
+define audio.examination = "/audio/AA/2-05 Investigation ~ Examination.mp3"
+define audio.difficult = "/audio/AA/1-34 Suspicious People.mp3"
+define audio.suspicious = "/audio/AA/1-35 Difficult People.mp3"
+
+#dontforgettoaddspoilers
+
+#define sound
+define audio.logowav = "/audio/567205__ddmyzik__simple-clean-logo.wav"
+define audio.clap1= "/sfx/cheering-and-clapping-crowd-1-5995.ogg"
+define audio.cheer1= "/sfx/crowd-cheer-ii-6263.ogg"
+define audio.clap2 = "/sfx/short-crowd-cheerflac-6713.ogg"
+define audio.clap3 = "/sfx/small-applause-6695.ogg"
+define audio.crowd = "/sfx/crowded-avenue-people-talking-vendors-shouting-musicians-playing-part-1-7099.ogg"
+define audio.laugh = "/sfx/Audience-Laughing-1-Sound-Effect.ogg"
+
+
+#transitions
+
+#Decare style and images
+image white = "#ffffff"
+
+style chapter_intro:
+    color'#ffffff'
+    size 42
+    font "VCR_OSD_MONO_1.001.ttf"
+
+style monologue:
+    color'#ffffff'
+    size 28
+    font "VCR_OSD_MONO_1.001.ttf"
+
+style monologue2:
+    color'#ffd6d6'
+    size 28
+    font "VCR_OSD_MONO_1.001.ttf"
+    outlines [ (absolute(20), "#ff0000", absolute(0), absolute(0)) ]
+
+
+# This is a variable that is True if you've compared a VN to a book, and False
+# otherwise.
+default presiden = False
+default debat_point = 0
+default jokowi_petinju = False
+default jokowigamer = False
+default normalend = False
+default petinjuend = False
+default gamerend = False
+default trueend = False
+
+#menu change
+default persistent.truendmenu = False
+
+#splashscreen
+image splash = "splash.png"
+
+label splashscreen:
+    scene white
+    with Pause(1)
+
+    play sound logowav
+
+    show splash with dissolve
+    with Pause(2)
+
+    scene white with dissolve
+    with Pause(1)
+
+    #need disclaimer
+
+    #add in respect to STTI rector that passed away
+
+    return
+
+# The game starts here.
+
+label start:
+    stop music fadeout 1.0
+    scene expression "#000"
+    with Dissolve(2.0)
+
+    # Start by playing some music.
+
+    play music wayhome
+
+    # Show a background. This uses a placeholder by default, but you can add a file (named either "bg room.png" or "bg room.jpg") to the
+    # images directory to show it.
+    # placeholder scene = "bg room.png"
+
+    scene black with dissolve
+
+
+    show text "{=chapter_intro}PROLOG{/=chapter_intro}" with Dissolve(1):
+            xalign 0.5 yalign 0.5
+    pause 1.5
+    show text "{=chapter_intro}JALAN PANJANG MENUJU CAHAYA{/=chapter_intro}" with Dissolve(1):
+            xalign 0.5 yalign 0.5
+    pause 2.0
+    scene black with dissolve
+
+    window hide
+    scene scene1 with fade
+    window show
+
+
+    "{size=+4}{color=#e30d0d}Siapa Sesungguhnya raykat?{/color}{/size}"
+    "Siapa yang menjadi objek dari kata yang sangat indah \"pembangunan\" yang terpampang di berbagai berita tentang pemerintahan?"
+    "Apakah Partai,{w} para wakil rakyat, {w} atau pemimpin?"
+    "Mereka yang berjuang untuk siapa? {w}Sebab, kata \"rakyat\" sering didengungkan."
+    "Siapakah Rakyat?"
+    nvl clear
+    "Apakah mereka yang berada di kota besar,{w} orang-orang kritis yang begitu percaya diri berbicara dan banyak didengarkan?"
+    "Apakah orang-orang mapan yang memiliki usaha besar?"
+    "Apakah aktivis yang berani berteriak di jalan-jalan menuntut ini dan itu?"
+    "Atau orang-orang serperti kami,{w} yang selalu terbangun pagi dengan harapan besar akan merasakan nasib baik di hari itu karena kehidupan yang tak pasti?"
+    nvl clear
+    "Kami yang tak sempat berteriak tentang politik atau kritik pada pemerintah."
+    "Sebab, masalah hidup paling mendasar sudah membungkam."
+    "{i}Kami Perlu makan{/i}"
+    nvl clear
+    window hide
+    scene scene2 with fade
+    window show
+
+    "Pemikiran ini sesungguhnya telah ada di benak saya, jauh sbelum lantai istana saya pijak."
+    "Jauh sebelum nama Jokowi dikenal di Indonesia."
+    "Jauh sebelum kiprah politik menjadi bagian dari hidup saya."
+    "Jauh sebelum ucapan saya didengar banyak orang"
+    "Saya adalah suatu dari puluhan bocah cilik yang berenang di sungai yang keruh sebagai satu-satunya kenikmatan hidup."
+    nvl clear
+    "Bukan,{w} kami bukan sedang piknik. {w} Rumah kami memang di bantaran sungai."
+    "Bangunan dari bambu yang lembap dan berimpitan."
+    "Suara gemercik air kali adalah bunyuk terindah."
+    "Menyusul suara radio,{w} satu-satunya benda berbunyi sebelum kami memiliki telivisi."
+    nvl clear
+    "Dari Radio itulah muncul kata \"rakyat\", juga\"pembangunan\"."
+    "Dua kata yang terasa tidak masuk akal ini,{w} karena kami tidak mengeti siapa subjek dan objeknya."
+    "Apakah kami yang disebut rakyat?"
+    "Jika iya,{w} kenapa kami tak merasakan indahnya pembangunan."
+    nvl clear
+
+    with dissolve
+    show jokowibw with Dissolve(2.0)
+    with Pause (1.0)
+
+
+    j "Saya Jokowi Widodo.{w} Ini adalah kisah masa muda saya,{w} sewaktu memulai perjalanan hidup." with fade
+
+    nvl clear
+    hide jokowibw with Dissolve(2.0)
+    stop music fadeout 1.0
+    scene expression "#000"
+    with Dissolve(3.0)
+    play music simpleday fadein 2.0
+
+    scene scene3 with fade
+
+    $ narrator = Character(None, kind=adv, callback=narrator_beep)
+    "Ini saya waktu kecil.{w} Saya berasal dari kota solo jawa tengah.{w} Saya anak sulung dari empat bersaudara. {w}Tiga adik saya semuanya perempuan.
+    {w}Saya berasal dari keluarga biasa. {w}"
+    "Kami berulang kali pindah rumah kontrakan, rumah sederhana yang mampu dibayar bapak untuk tempat tinggal kami sekeluarga."
+    scene scene4 with fade
+    "Bapak berjuang, untuk hidup kami dengan berjualan bambu dan kayu dipasar.{w} Ibu sangat gigih membantu bapak.{w}"
+    "Setelah selesai masak dan membereskan rumah. {w} Ia segera pergi ke lapak dagang bapak untuk membantu mengikat bambu dan kayu."
+    "Mereka melakukan itu semua demi anak-anaknya demi bisa sekolah. {w} Mereka meyakinkan saya bahwa sekolah akan mampu mengubah hidup saya."
+    "Perjuangan dan usaha bapak sangat menginspirasi saya. {w} Usaha bapak berjalan baik dangan makan laku dan saya tahu ibu mulai punya uang."
+    "Sayapun mulai nakal waktu itu."
+    "Saya iseng sering memanggil pedagang makanan apa saya yang lewat dekat rumah.{w} Tukang siomay, tukang bakso, tukang jajanan pasar."
+    "Ibupun terpaksa membayar apapun yang saya pesan."
+    "Suatu kali saya asal manggil saya ada tukang lewat di depan rumah."
+
+    scene expression "#000" with Dissolve(1.0)
+    scene scene5 with fade
+    show jokowikecil 
+    pause(2.0)
+    show jokowikecil at slightleft with move
+    jkecil "Bu, beli kuenya satu!"
+    show penjualarang at slightright with moveinright
+
+    pjkue "Iya nak, bentar."
+    "Saya pikir jual kue pasar, ternyata tukang arang."
+    "Ibu muncul sebelum saya sempat berlari,{w} terpaksa ibu membelinya dan langsung meyodorkan bungkusan berisi arang untuk saya makan sambil berkata."
+    scene scene6 with fade
+    ibujokowi "Ayo makan habisan, yah!"
+    ibujokowi "Kamu kan yang kepingin jajan?"
+
+    scene scene8 with fade
+    "Suatu hari kami kena gusur pemerintah daerah karena rumah kami daerah rumah kami akan dibangun fasilitas kota."
+    "Kami sekeluaraga terusir begitu saja tanpa ada perhatian di mana kami akan tinggal."
+    "Kejadian ini membuat kami sekeluarga sangat terpukul.{w} Kami terpaksa menumpang di rumah Paman."
+    "Keadaan yang sulit membuat kami sekeluarga gigih berjuang lebih keras."
+    "Bapak menjadi supir angkutan umum, setelah sekolah saya membantu Ibu berjualan di pasar meneruskan usaha Bapak."
+    scene scene7 with fade
+    "Kami sekeluarga menjalani hidup tanpa mengeluh dan saling mengalirkan energi positif."
+    "Bersama-sama kami berjuang untuk tidak lagi menumpang.{w} Kerja keras tidak pernah sia-sia."
+    "Bapak bisa membuka bengkel usaha kayu."
+
+    scene scene10 with fade
+    "Setelah beberapa tahun akhirnya uang bisa terkumpul untuk bisa membeli rumah sederhana."
+    "Tahun 1980 akhirnya saya memutuskan untuk kuliah di jurusan teknologi kayu kehutanan UGM."
+    "Saya memilih jurusan tersebut agar saya dapat belajar lebih mendalam tentang perkayuan."
+    "Saya ingin mengikuti jejak Bapak, ingin membangun bisnis kayu bapak menjadi besar."
+
+    scene scene9 with fade
+    "Ini saya gondrong waktu kuliah dan saya suka banget dengerin musik cadas dari Nazareth, Queen, Metallica, Judas Priest, Guns N' Roses."
+    "Saya juga hobi banget naik gunung. {w} Gunung Lawu, gunung Merapi, gunung Merbabu, gunung Kerinci, sudah saya daki."
+    "Menginjak masa penulisan skripsi di masa kuliah saya sudah agak kalem."
+    "Akan menginjak dunia kerja saya memutuskan lebih serius."
+
+    stop music fadeout 2.0
+    scene expression "#000" with Dissolve(3.0)
+
+    show text "{=monologue}{i}Tak lama kemudian...{/i}{/=monologue}" with Dissolve(1):
+            xalign 0.5 yalign 0.5
+    pause 1.5
+
+
+    play music angel
+
+    scene scene13 with fade
+    "Saya bertemu dengan gadis bernama Iriana.{w} Dia teman adik saya yang sering main ke rumah."
+    "Pertama, curi-curi pandang,{w} lama-lama jadi jatuh cinta."
+    "Iriana orangnya sederhana dan itu yang saya suka."
+    "Pacaran waktu itu berat di ongkos tapi ringan di hati."
+    "Saya naik bus penuh sesak, bolak-balik jogja-solo demi bertemu Iriana."
+
+    scene scene11 with fade
+    "Lulus kuliah tahun 1985 saya melamar ke sebuah perusahaan kertas di aceh."
+    "Setelah diterima saya baru tahun akan ditempatkan di hutan rimba."
+    "Pekerjaan saya adalah mempersiapkan persemaian pinus untuk kemudian ditanam di lapangan di hutan-hutan yang gundul."
+    "Beberapa bulan setelah itu saya kembali ke solo untuk menikahi iriana, dan menyiapkan keberangkatan kami ke aceh."
+
+    scene scene12 with fade
+    "Masa awal pernikahan kami berada di hutan rimba selama 2.5 tahun."
+    "Pada tahun kedua Iriana sudah dalam kondisi hamil dan kita memutuskan untuk melahirkan anak pertama kali di solo."
+
+    scene scene14 with fade
+    "Kembali ke Solo, mulai ikut paman berkerja di pabrik mebel untuk mencari pengalaman."
+    "Di sini saya belajar banyak tentang bagaimana menjadi pengusaha yang baik."
+    "Semua posisi pernah saya lakoni. Di produksi, di pemasaran semuanya pernah saya alami."
+
+    scene scene15 with fade
+    "Tahun 1987 anak pertama saya lahir, Gibran Rakabuming. {w}Gibran itu singkatan itu dari gigih dan berani."
+    "Saya ingin putra pertama saya punya semangat hidup seperti namanya."
+
+    scene scene16 with fade
+    "Lahirnya gibran juga memicu saya untuk mendirikan perusahaan pertama saya yang bergerak di bisnis mebel, dengan nama CV RAKABU."
+    "Tapi ternyata menjadi pengusaha bukanlah sesuatu yang mudah."
+
+    scene scene17 with dissolve
+    "Saya pernah habis ditipu,{w} barang sudah dikirim tapi tidak dibayar,{w} lalu orangnya menghilang."
+    "Kalau kita jatuh yah harus bangkit lagi."
+    "Tidak lama setelah itu saya mendapatkan pinjaman modal usaha."
+    "Dengan samangat untuk bangkit dan berkembang saya bergerak cepat untuk mencari pesanan sampai luar negeri dengan cara ikut pameran-pameran mebel."
+    "Hasil usaha saya mulai terlihat, kantor tidak pernah sepi dari kunjungan pembeli."
+
+    scene scene18 with fade
+    "Disini saya bertemu dengan pembeli dari perancis Bernard Chene."
+    "Dia yang memberi sebuatan \"Jokowi\" untuk saya. untuk membedakan Joko Widodo dengan joko-joko lainnya yang banyak beliau kenal."
+    "Sejak saat itu orang-orang lingkungan pengusaha mebel mulai memanggil saya Jokowi."
+
+    scene scene20 with fade
+    "Dua anak saya lahir setelah keadaaan ekonomi keluarga membaik."
+    "Kahiyang Ayu dan Kaesang Pangarep."
+    "Saya ingin anak-anak saya mengenak sekolah kehidupan yang dilandasi perjuangan untuk mandiri."
+    "Supaya merupa semua mampu membangun kehidupan yang kukuh."
+    "Keluarga adalah sumber kekuatan terbesar bagi saya."
+
+    scene scene19 with fade
+    jpot "Saya yakin yang saya alami waktu muda sedang kalian alami sekarang."
+    jpot "Tidak ada jokowi hari ini jika tidak ada sejarah susah hidup saya."
+    jpot "Teruslah berjuang mewujudkan mimpi-mimpi kalian."
+    jpot "{size=+4}{cps=15}Mari kita terus bangun indonesia maju.{/cps}{/size}" with dissolve
+
+    stop music fadeout (2.0)
+    scene expression "#000" with Dissolve (2.0)
+
+    jump chapter1
+
+    label chapter1:
+
+    scene black with dissolve
+
+    show text "{=chapter_intro}BAGIAN PERTAMA{/=chapter_intro}" with fade:
+            xalign 0.5 yalign 0.5
+    pause 1.5
+    show text "{=chapter_intro}THE POWER OF BLUSUKAN{/=chapter_intro}" with Dissolve(1):
+            xalign 0.5 yalign 0.5
+    pause 2.0
+    show text "{=monologue}{i}Saya masuk ke dunia politik dan pemerintahan awalnya tanpa rencana.\n Maju menjadi walikota karena dorongan teman-teman di organisasi.\n Anehnya, semakin saya menghindari dan menolak jalan itu,\n Semakin mudah jalan terhampar di depan mata.\n Saya artikan itu, Allah memang menginginkan saya terjun ke dalamnya.{/i}{/=monologue}" with Dissolve(1):
+            xalign 0.5 yalign 0.5
+    pause 5.0
+    scene black with dissolve
+
+    play music melodyofnature
+    scene scene21 with fade
+    jpot "Awal mula masuk kancah politik bukan suatu hal yang direncanakan."
+    jpot "Saya tidak pernah bercita-cita terjun ke dalam dunia politik."
+    jpot "Bermula dari usaha saya sebagai pebisnis perkayuan yang sudah sukses baik di nasional maupun internasional."
+    jpot "Di dalam kegiatan usaha saya, saya melihat banyak pengrajin meubel atau pengrajin kayu yang nasib usahanya sangat prihatin."
+    jpot "Karena tidak mampu bersaing dengan pengusaha besar."
+    jpot "Saya ingin mengangkat nasib para pengrajin dan pengusaha kecil ini untuk lebih maju dalam usahanya."
+    jpot "Dari sinilah saya dengan para pengusaha mebel dan kerajinan baik yang besar maupun yang kecil membuat sebuah organisasi."
+
+    scene scene22 with fade
+    jpot "Pada tahun 1988 berdirilah Asmindo, Asosiasi Pengusaha Mebel Indonesia."
+    jpot "Lalu berdiri juga cabang organisasi di Surakarta pada tahun 2002 dengan nama Asmindo Komda Surakarta, dan saya terpilih sebagai ketua secara aklamasi."
+    jpot "Di Asmindo inilah daya kritis saya terasah pada persoalan rakyat."
+    jpot "Di Asmindo selain bisnis juga membahas akan kemajuan kota kami yaitu Solo."
+    jpot "Saya ingin Solo menjadi kota yang dapat memanjukan pengusaha lokal, terutama pengusaha menengah ke bawah."
+    jpot "Saya mengkritik pemerintah yang tidak dapat membuat Solo sebagai kota wisata yang dikunjungi banyak turis."
+    jpot "Padahal jika dilihat Solo adalah kota budaya, tapi pariwisata di Solo sepi tidak berkembang."
+    jpot "Dari kritik-kritik yang sering saya cetuskan dalam kegiatan saya sebagai pembicara."
+    jpot "Diberbagai kegiatan inilah saya mulai dilirik partai politik untuk dijadikan calon walikota Solo."
+
+    scene scene23 with fade
+    jpot "Dari awal yang merupakan guyonan dan rumor, tapi makin lama rumor itu semakin berkembang."
+    jpot "Saya yang dari awal memang tidak berminat terjun ke dunia politik menolak rumor tersebut."
+    jpot "Namun akhirnya saya berfikir kenapa saya tidak membangun Solo dengan cara menjadi walikota?"
+    jpot "Seandainya saya menjadi walikota saya dapat membangun dan mengembangkan kota Solo menjadi lebih baik."
+    jpot "Tapi saya tidak langsung mengambil keputusan untuk ikut dalam pemilihan walikota."
+    jpot "Saya meminta pendapat kepada istri dan anak-anak saya terlebih dahulu agar mereka tidak kaget nantinya. "
+    jpot "Bagi saya suara dan pendapat keluarga sangat penting karena mereka adalah bagian hidup saya."
+    jpot "Akhirnya saya siap mencalonkan diri menjadi walikota Solo berpasangan dengan FX Hadi Rudyatmo di bawah bendera Partai Demokrasi Indonesia (PDI)."
+
+    scene scene24 with fade
+    jpot "Pada tahun 2005 kami memulai kampanye pemilihan walikota Solo."
+    jpot "Dalam berkampanye saya memiliki pemikiran lain dalam melaksanakan kampanye."
+    jpot "Saya tidak ingin kampanye yang menyedot banyak uang."
+    jpot "Saya ingin berkampanye dengan menjadi diri sendiri  yaitu rakyat biasa yang pernah hidup susah dan mampu menjadi lebih baik karena bekerja keras."
+    jpot "Dibantu oleh wartawan Anggit Noegroho, saya membuat branding untuk saya sendiri sebagai rakyat biasa, disinilah saya memulai {i}blusukan.{/i}"
+    jpot "Blusukan memiliki makna bukan hanya mengunjungi suatu daerah."
+    jpot "Tetapi juga menjangkau suatu tempat sampai sudut terdalam, merasakan kehidupan rakyat sampai ke lorong yang tak terlihat oleh masyarakat luar."
+    jpot "Dengan kampanye blusukan ini akhirnya saya dapat memenangkan pilkada Solo dan terpilih sebagai walikota dengan jumlah pemilih 37%%."
+    jpot "Tantangan sebagai walikota sangat berat."
+    jpot "Karena saya ingin mempertahakan kota Solo sebagai warisan budaya “Heritage” dengan mempertahankan situs-situs bersejarah, tradisi batik, dan atraksi seni"
+    jpot "Sementara tuntutan zaman menginginkan perubahan yang besar."
+    jpot "Tantangan terbesar saya sewaktu menjadi walikota Solo adalah menertibkan pedagang kaki lima yang berjumlah hampir 5000 pedagang."
+    jpot "Tapi berkat pendekatan yang baik para pedagang akhirnya dapat dipindahkan ke tempat yang lebih pantas dan seharusnya. "
+
+    scene scene25 with fade
+    show jokowicolor with Dissolve(1.0)
+
+    j "Selama saya memimpin Solo antara tahun 2005 hingga tahun 2012."
+    j "Saya sangat bahagia telah melakukkan hal-hal yang memberi perubahan baik."
+    j "Dihadapi oleh dua pilihan pada saat itu."
+    j "Ingin membangun Solo sebagai kota modern atau ingin mempertahankan Solo sebagai kota budaya."
+    j "Saya lakukan keduanya di dalam kondisi harmonis."
+    j "{i}City Branding{/i} Solo saya bangkitkan kembali untuk membuat kota ini kembali menarik sebagai tujuan wisata."
+    j "Pasar rakyat dan ruang-ruang publik berarura budaya dihidupkan."
+    j "Dipercantik dengan perbaikan di sana-sini."
+    j "Berbagai sentra seni diagrahkan kembali."
+    j "Sementara itu, semangat {i}blusukan{/i} terus berjalan. Tak ada waktu senggang."
+    j "Mengunjungi dan berdialog dengan rakyat bagaikan napas yang menghidupkan tubuh pemerintahan."
+    j "Tidak boleh berhenti. Hanya saja jadi walikota, {i}blusukan{/i} dilakukan lebih dari terkonsep dan tersegementasi."
+    j "Jadi saya ciptakan kegiatan rutin mengunjungi rakyat setiap hari Jumat."
+    j "Namanya {i}Mider Projo{/i} yang artinya keliling kota dan kamping."
+    j "Jadi, setelah olahraga pagi di hari Jumat, dengan bersepeda saya menuju satu wilayah bersama jajaran staf."
+    j "Masih mengenakan baju olahraga saja, memasuki wilayah pelosok Solo yang memang tidak mungkin memakai kenadaraan karena banyak gang kecil."
+    j "Nah, pada saat {i}mider projo{/i} inilah saya bisa mendata lagi persoalan rakyat dan melihat hal-hal tak beres yang bisa ditolong."
+    j "Apa yang terjadi di Solo di masa saya menjadi walikota menuai banyak pujian juga kritikan."
+    j "Banyak yang bilang Jokowi Pencitraan. Sengaja menggeber aksi-aksi heroik agar dipuji secara nasional."
+    j "Saya sungguh heran dengan pandangan ini."
+    j "Apa yang saya lakukan itu memang sesuatu yang harus dilakukan. Tak ada yang berlebihan."
+    j "Memang yang seharusnya itu yang dilakukan Pemerintah Kota Solo. Bukan hal yang istimewa."
+    j "Kita tanpa sadar berada di zona nyaman yang tidak beres dianggap wajar sehingga,"
+    j "Ketika ada sesuatu yang sebetulnya wajar justru dianggap pencitraan."
+
+    nvl clear
+    hide jokowicolor with Dissolve(1.0)
+    stop music fadeout 1.0
+    scene expression "#000"
+    with Dissolve(1.0)
+
+
+    scene black with dissolve
+
+    show text "{=monologue}7 tahun setelah diangkat menjadi Walikota...{/monologue}" with Dissolve(1):
+            xalign 0.5 yalign 0.5
+    pause 1.5
+
+    show text "{=monologue}Maret 2012{/monologue}" with Dissolve(1):
+            xalign 0.5 yalign 0.5
+    pause 1.5
+
+    scene black with dissolve
+
+    #recheck
+    play music triumph
+    scene scene26 with fade
+    "Pada 17 Maret 2012, ponsel saya berdering saat saya sedang asyik menonton pentas Opera Van Java."
+    "Kaget, SMS dari Ibu Megawati yang merupakan tokoh besar dari PDI Perjuangan."
+    "Saya diminta segera ke Jakarta esok pagi dengan pesawat yang paling pagi."
+    "Agendanya, saya diminta mengikuti rapat yang digelar DPP dan DPD PDIP di markas besar di tebet."
+    "Dengan segera saya mengontak Anggit, meminta agar ia mendampingi saya."
+    "Saya juga mengajak Hanggo yang merupakan ajudan saya."
+
+    scene scene27 with fade
+    "Setibanya di sana bukan main terkejutnya saya melihat keriuhan susana di sekitar kantor DPP PDIP."
+    "Wartawan merubung saya ketika saya berjalan menuju gerbang kantor"
+    "Pertanyaan-pertanyaan yang menysasar ke satu topik yang tajam bersahutan."
+
+    wartawan1 "Pak, Bapak akan maju ke Pilkada DKI?"
+    wartawan2 "Pak Jokowi sudah mengetahui perihal akan dicalonkan jadi gubernur"
+    "Saya tertawa. Bukan terawa tenang, tapi tertawa bingung"
+    "Saya tinggalkan para wartawan dan masuk ke dalam gedung markas besar PDIP"
+
+    scene scene28 with flash
+    play audio clap1
+    "Di dalam, saya sangat terkejut. Tepuk tangan meriah menyambut saya."
+    "Saya masih belum bisa mengusai diri karena terkejut."
+    "Ini {i}surprise{/i}. Tidak saya sangka ada sambutan sebegini hangat dan meriah. Ada apa?"
+    "Apa yang dibicarakan?"
+    "Ternyata rapat memutuskan saya untuk maju ke Pilkada DKI Jakarta, calon PDI Perjuangan."
+    "Suara tepuk tangan gegap gempita. Saya terhenyak. Bunyi Riuh tepuk tangan terus membahana."
+    "Saya tak menduga akan dipercaya dan didukung sebesar ini."
+    "Rapat itu hanya berlangsung selama menit dan saya langsung pamit ke hotel bersama Anggit dan Hanggo."
+
+    scene scene28 with fade
+    "Esok harinya berlangsunglah rapat untuk memutuskan calon Wakil saya."
+    "Waktu terus berjalan dan akhirnya rapat memutuskan Pak Ahok menjadi wakil saya."
+    "Namun tidak semua berjalan dengan lancar."
+    "Banyak rakyat memiliki opini tentang saya dengan alasan Saya tidak amanah karena tugas masih berjalan di Solo tapi saya sudah melompat ke Jakarta."
+
+    scene extra1 with fade
+    "Di dalam keluarga saya sendiri terjadi Penolakan."
+    "Istri saya mengeluh karena alasan orang tentang berganti kepemimpinan sebelum selesai menjalankan."
+    "Sedangkan anak saya Gibran hanya menyengir ketika saya meminta izin."
+    gibran "Bapak yakin ingin ikut pilkada?"
+    j "Bapak yakin menang."
+    "Anak-anak saya sudah terbiasa mendegar celetukan saya yang kelewat percaya diri."
+    "Tapi, saat itu saya memang yakin akan menang. Entah kenapa."
+    "Ketiga anak saya, walau tidak setuju, selalu memberi pandangan positif dan teduh."
+    "Walaupun mereka menolak, bukan karena tak suka dan percaya."
+    "Namun untuk meyakinkan saya apa bisa saya jadi Gubernur."
+
+    scene scene29 with fade
+    "Kampanye dilakukan dengan dana seadanya. Tanpa kemewahan."
+    "Tidak lama kemudian setelah kampanye berakhir, Saya dan Pak Ahok berhasil memenangkan pilkada yang sangat emosional saat itu."
+    "Tahun 2012 kami dilantik menjadi Gubernur dan Wakil Gubernur DKI Jakarta periode 2012-2017."
+    "{size=+4}{cps=15}Lembaran perjalanan baru dimulai...{/cps}{/size}"
+
+
+    scene expression "#000" with dissolve
+
+    scene black with dissolve
+    show text "{=monologue}{i}Dua tahun saya memimpin Jakarta,\n panggilan yang lebih besar kemudian datang.{/i}{/=monologue}" with Dissolve(1):
+            xalign 0.5 yalign 0.5
+    pause 2.0
+    show text "{=monologue}{i}PDIP memajukan saya sebagai contoh kuat di Pemilihan Presiden 2014.{/i}{/=monologue}" with Dissolve(1):
+            xalign 0.5 yalign 0.5
+    pause 3.0
+
+    scene scene30 with fade
+    jpot "Demikianlah, dari Jakarta saya didorong untuk mengikuti pemilihan presiden pada tahun 2014."
+    jpot "Ini perkembangan amanah. Saya Menyetujui maju bersama Pak Jusuf Kalla"
+    jpot "Sekali lagi, ini bukan tentang keinginan untuk memanfaatkan kesempatan dan meraih pencapaian yang lebih tinggi."
+    jpot "Saya harus meluruskan ini."
+    jpot "Bahwa ini bukan tentang Ambisi.{w} Bukan tentang syahwat berkuasa."
+    jpot "Ini adalah sebuah jalan pengabdian yang terus berproses dan menemukan jalan-jalan baru pengabdian secara alamiah."
+
+    stop music fadeout 2.0
+
+    jump chapter2
+
+    label chapter2:
+
+    scene black with dissolve
+
+    show text "{=chapter_intro}BAGIAN KEDUA{/=chapter_intro}" with Dissolve(1):
+            xalign 0.5 yalign 0.5
+    pause 1.5
+
+    show text "{=chapter_intro}PEMILIHAN PRESIDEN{/=chapter_intro}" with Dissolve(1):
+            xalign 0.5 yalign 0.5
+    pause 2.0
+
+    show text "{=monologue}Bagian ini merupakan bagian yang merupakan campuran dari fiksi dan fakta \ndimana anda akan mengajukan pertanyaan dan jawaban kepada \n Calon Presiden Ke.2, Bapak Prabowo Subianto.{/=monologue}" with Dissolve(1):
+            xalign 0.5 yalign 0.5
+    pause 5.0
+
+    show text "{=monologue}Bagian ini termasuk panjang jadi dipersilahkan untuk menggunakan fitur save/load jika diperlukan disetiap Sesi.{/=monologue}" with Dissolve(1):
+            xalign 0.5 yalign 0.5
+    pause 3.0
+    scene black with dissolve
+
+    scene scene31 with fade
+
+    play music lobby
+
+    "Gran Melia, Jakarta"
+
+    show ahmad serius at centerdebat with fade
+    moderator "Selamat malam, selamat datang dalam Debat Pilpres 2014."
+    ahmad "Topik debat malam ini mengenai pembangunan ekonomi dan kesejahteraan sosial saya Ahmad Erani Yustika moderator debat malam ini."
+    ahmad "Selanjutnya langsung saja kita undang calon Presiden nomor urut 1 Bapak Haji Prabowo Subianto dan calon Presiden nomor urut 2 Bapak Insinyur Haji Joko Widodo."
+    ahmad "Marilah kita semua berdiri untuk menyanyikan lagu kebangsaan Indonesia Raya."
+    hide ahmad serius with dissolve
+    stop music fadeout 1.0
+
+    #song here maybe movie?
+    #changescene here
+    scene black with Dissolve(2.0)
+    #play music indonesiaraya noloop
+    #"......."
+    #"......."
+    $ renpy.movie_cutscene("/video/-Debat Capres 2014-.mpg")
+    #playmovie here
+    #stopmovie
+    #stop music fadeout 1.0
+    #showahmad
+    scene scene31 with fade
+    show ahmad bicara at ahmadcenterfix with fade
+    ahmad "Calon presiden dan hadirin sekalian dimohon duduk kembali."
+    ahmad "Sebelum kita mulai debat Malam ini kita saksikan aturan main debat yang telah ditetapkan oleh Komisi Pemilihan Umum."
+    hide ahmad bicara with dissolve
+    window hide
+
+    show extrashade with dissolve
+    show text "{=monologue2}Debat malam ini terbagi dalam 6 bagian pada bagian pertama moderator mempersilahkan kedua calon presiden menyampaikan,\n visi dan misi masing-masing dalam waktu 4 setengah menit.{/monologue2}"  with Dissolve(1):
+            xalign 0.5 yalign 0.5
+    pause 3.0
+
+    show text "{=monologue2}Moderator akan mempertajam visi dan misi setiap capres pada bagian kedua.\n Pada bagian ketiga moderator akan melayangkan pertanyaan yang sama kepada kedua kandidat untuk dijawab dalam waktu maksimal 3 menit.{/monologue2}" with Dissolve(1):
+            xalign 0.5 yalign 0.5
+    pause 3.0
+
+    show text "{=monologue2}Masing-masing calon presiden diberikan kesempatan 3 kali untuk saling bertanya pada bagian ke-4.\n Sementara pada bagian kelima kedua calon presiden diberikan kesempatan untuk bertanya sekaligus menanggapi jawaban.\n Setiap calon Presiden akan menyampaikan pernyataan penutup dalam waktu 3 menit pada bagian akhir.{/monologue2}" with Dissolve(1):
+            xalign 0.5 yalign 0.5
+    pause 3.0
+    hide extrashade with dissolve
+
+    scene scene31 with fade
+
+    #"Debat malam ini terbagi dalam 6 bagian pada bagian pertama moderator mempersilahkan kedua calon presiden menyampaikan,"
+    #"visi dan misi masing-masing dalam waktu 4 setengah menit"
+    #"Moderator akan mempertajam visi dan misi setiap capres pada bagian kedua."
+    #"Pada bagian ketiga moderator akan melayangkan pertanyaan yang sama kepada kedua kandidat untuk dijawab dalam waktu maksimal 3 menit."
+    #"Masing-masing calon presiden diberikan kesempatan 3 kali untuk saling bertanya pada bagian ke-4."
+    #"Sementara pada bagian kelima kedua calon presiden diberikan kesempatan untuk bertanya sekaligus menanggapi jawaban."
+    #"Setiap calon Presiden akan menyampaikan pernyataan penutup dalam waktu 3 menit pada bagian akhir."
+
+    show ahmad serius at ahmadcenterfix
+
+    window show
+
+    play music question fadein 0.5
+    ahmad "Itulah aturan main debat kali ini"
+    ahmad "Namun ada aturan tambahan pertama untuk menjaga ketertiban dan konsentrasi kandidat."
+    ahmad "Kami mohon agar tepuk tangan hadirin sekalian hanya dilakukan setelah Kandidat selesai berbicara."
+    ahmad "Yang kedua urutan berbicara dilakukan bergantian setiap debat."
+    ahmad "Pada debat pertama yang digelar Pekan lalu kandidat nomor satu mendapat kesempatan pertama pada debat kali ini sesuai aturan dari KPU."
+    ahmad "Kami persilakan kandidat nomor urut 2 Bapak Joko Widodo untuk yang pertama kali menyampaikan visi dan misi"
+    ahmad "Terkait pembangunan ekonomi dan kesejahteraan sosial."
+    ahmad "Waktu 4 menit dimulai dari sekarang."
+    hide ahmad serius with dissolve
+    stop music fadeout 1.0
+
+    scene scene32jokowi with fade
+
+    show jokowidebat at centerdebat with dissolve
+    play music lobby volume 0.3 fadein 1.0
+
+    j "Bismillahirrahmanirrahim...."
+    j "Assalamualaikum warahmatullahi wabarakatuh."
+    j "Selamat malam Salam sejahtera bagi kita semuanya, om swastiastu."
+    j "Yang hormati Bapak Prabowo Subianto."
+    j "Yang saya hormati moderator Ibu, Bapak sekalian saudara-saudara sebangsa dan setanah air"
+    j "Saya berdiri disini karena,{w} Saya saat bertemu, Ibu Eli. {w}Tukang cuci dari Manado Sulawesi Utara."
+    j "Saya bertemu Pak Abdullah, Nelayan dari Belawan di Sumatera Utara."
+    j "Dan saat saya ke Banyumas saya bertemu Ibu Satinah buruh tani yang setiap hari bekerja di sawah."
+    j "Dan Saya juga bertemu Pak Asep seorang guru di Jawa Barat."
+    j "Dan jutaan orang. {w} Yang ada di negara ini. Yang menitipkan pesan, {w} menitipkan harapan-harapan kepada kami."
+    j "Untuk, Membangun sebuah ekonomi yang lebih baik, memajukan ekonomi Indonesia lebih baik."
+    j "Bagi saya, Ekonomi ditujukan, Sebesar-besarnya untuk kemakmuran rakyat, itulah ekonomi yang pergi cari ekonomi Berdikari."
+    j "Pembangunan ekonomi, {w} menurut kami ke depan yang pertama, {w} Dilakukan adalah pembangunan manusia nya terlebih dahulu."
+    j "Lewat apa? {w} Lewat pendidikan pendidikan yang seperti apa? {w} Revolusi mental harus kita lakukan."
+    j "Kemudian, Bidang kesehatan dengan Kartu Indonesia sehat seperti inilah yang harus kita kerjakan."
+    j "Kemudian juga dengan kecerdasan yaitu dengan Kartu Indonesia Pintar seperti ini"
+    j "Karena dengan pembangunan manusia itulah kita akan mempunyai sebuah manusia yang produktif."
+    j "Produktivitas akan meningkat dan produktivitas kita sudah meningkat kita akan mempunyai sebuah daya saing."
+    j "Karena produktivitas akan memunculkan sebuah daya saing yang ke-2 yang ke-2 yang ke-2"
+    j "Yaitu masalah pertumbuhan ekonomi yang diikuti dengan pemerataan.{w} Percuma pertumbuhan ekonomi baik kalau pemerataan itu tidak ada."
+    j "Oleh sebab itu ke depan akan menjadi sebuah perhatian bagi kami berdua Jokowi dan JK (Jusuf Kalla),"
+    j "Pembangunan yang seperti apa yang ingin kita lakukan pembangunan koperasi membangun UMKM pembangunan pasar tradisional,"
+    j "Pembangunan pertanian dan pembangunan ekonomi maritim serta industrinya dan juga pembangunan yang dimulai dari daerah,"
+    j "Pembangunan yang dimulai dari desa dan infrastruktur."
+    j "Inilah yang kami maksud sebagai jalan kebaikan yang akan membuat rakyat semakin sejahtera,"
+    j "Yang akan membuat ekonomi kita kokoh dan berdaya saing tinggi sehingga ekonomi Indonesia ekonomi yang Berdikari."
+    j "Terima kasih."
+
+    hide jokowidebat with easeoutleft
+    play audio clap2  volume 0.3
+    #stop music fadeout 3.0
+
+
+    ahmadpot "Terima kasih Pak Joko Widodo."
+    ahmadpot "Ini kami berikan kesempatan kepada Bapak Prabowo Subianto untuk menyampaikan visi dan misinya waktu sama 4 setengah menit dimulai dari sekarang."
+
+    scene scene32prabowo with fade
+
+    queue music lobby volume 0.2
+
+    show prabowodebat at centerdebat with dissolve
+    p "Terima kasih."
+    queue music lobby volume 0.3
+    p "Bismillahirohmanirohim Assalamualaikum warahmatullahi wabarakatuh."
+    p "Salam sejahtera bagi kita sekalian Shalom Om Swastiastu, saudara moderator, saudara Joko Widodo calon Presiden nomor 2."
+    p "Malam ini kita membahas pembangunan ekonomi dan kesejahteraan sosial."
+    p "Kita mengerti bahwa tujuan kita bernegara adalah untuk mencapai kemakmuran bersama, {w} masalahnya adalah bagaimana mencapai itu."
+    p "Banyak program indah bagus kita harus begini kita harus begitu kita harus membangun ini membangun itu pendidikan gratis kesehatan gratis dan sebagainya."
+    p "Masalahnya dari mana uangnya, dari mana sumber daya untuk kita pakai, untuk kita tumbuhkan kesejahteraan itu saudara-saudara sekalian."
+    p "Saudara-saudara sekalian."
+    p "Pada tanggal 7 September tahun yang lalu ketua KPK kita,"
+    p "Menyatakan bahwa kebocoran dan kehilangan kekayaan negara dari Republik Indonesia satu tahun adalah 7200 triliun."
+    p "1 tahun tim pakar Kami menggunakan angka 1000 Triliun yang hilang, 1000 Triliun saja sudah fantastis sudah luar biasa besarnya"
+    p "Di sinilah, rencana kami Prabowo Subianto dan Hatta Rajasa manakala kami menerima mandat dari rakyat Indonesia ini sasaran kami,"
+    p "Kami Ingin menutup kebocoran 1000 Triliun itu, kami ingin menghemat, Kami ingin memangkas dan,"
+    p "kami ingin mengalihkan yang 1000 Triliun bocor kita alirkan untuk membangun ekonomi kerakyatan, Ekonomi untuk rakyat Indonesia, bukan rakyat untuk ekonomi."
+    p "Kita ingin sekarang mengalirkan bukan dari desa ke kota ke ibukota tapi di balik dari ibukota turun ke desa."
+    p "Saya telah menandatangani Deklarasi bahwa manakala Saya mernerima mandat dari rakyat."
+    p "Saya akan alokasikan 1 miliar rupiah minimal 1 tahun untuk tiap desa dan kelurahan di seluruh Indonesia."
+    p "Kita akan alirkan dana dari ibukota turun ke rakyat Indonesia kami akan dalam 5 tahun meminimalkan korupsi dari APBD dan APBN."
+    p "Kami akan menaikkan penghasilan rata-rata rakyat Indonesia dua setengah kali lipat dari sekarang 3 juta perbulan menjadi 6 juta perbulan di ujung 5 tahun kami."
+    p "Kami akan menambah sawah 2 juta hektar kami akan menambah 2 juta hektar untuk bioetanol kami akan membangun 3.000 Kilometer,"
+    p "3 ribu KM kereta api 8 Pelabuhan."
+    p "Kami akan membuat bank tani dan nelayan dan Bank koperasi dan juga lembaga tabung Haji."
+    p "Haji saudara-saudara dananya ada uang nggak ada tinggal kemauan kita, kemauan kita berani atau tidak Kita kerja keras."
+    p "Berani atau tidak Kita pantas kebocoran berani atau tidak kita berantas korupsi, itu tekad Prabowo Subianto Hatta Rajasa dan seluruh Koalisi Merah Putih ."
+    p "Kami akan bekerja keras sekeras kerasnya untuk melakukan itu sehingga seluruh bangsa Indonesia akan naik."
+    p "Kita akan menjadi negara kuat kita akan hormat karena justru kita menjadi negara yang menguasai kekayaan kita sendiri ."
+    p "Kekayaan bangsa Indonesia harus untuk rakyat Indonesia dan tidak boleh kita biarkan bocor terus atau mengalir keluar negeri."
+    p "Itulah tekad kami dan itulah keyakinan kami, kami yakin mana kala kami Mandat kami akan mencapai tujuan itu."
+    p "Terima kasih wassalamualaikum warahmatullahi wabarakatuh Om Shanti Shanti Om."
+
+    hide prabowodebat with moveoutright
+    play audio clap3 volume 0.5
+    stop music fadeout 2.0
+
+    scene scene32duduk with fade
+    show ahmad bicara at ahmadcenterfix with dissolve
+    ahmad "Terima kasih Pak Prabowo dan sesi berikutnya kami akan membedah visi misi yang baru disampaikan kedua calon presiden"
+    ahmad "Tetaplah bersama kami di Debat Capres 2014"
+    hide ahmad bicara with dissolve
+    window hide
+
+    stop music fadeout(2.0)
+
+    scene black with dissolve
+
+    jump chapter2_2
+
+    label chapter2_2:
+
+    scene scenesesi with fade
+    show extrashade with dissolve
+    show text "{=chapter_intro}Debat Sesi Kedua\n Penajaman Visi dan Misi{/=chapter_intro}" with Dissolve(1):
+            xalign 0.5 yalign 0.5
+    pause 1.5
+    hide extrashade
+
+
+    scene scene32duduk with fade
+    window show
+    play music crowd volume 0.5
+    pause 3.0
+    stop music fadeout 2.0
+
+    show ahmad bicara at ahmadcenterfix with fade
+    play music question volume 0.5 fadein 1.5
+    ahmad "Anda kembali menyaksikan Debat Capres 2014."
+    ahmad "Ini adalah seri penajaman visi dan misi pertanyaan pertama kepada capres nomor urut 1 Pak Prabowo Subianto."
+    ahmad "Pak Prabowo, tadi dalam paparan anda kurang lebih bisa dikatakan bahwa induk dari platform ekonomi ke depan adalah ekonomi kerakyatan."
+    ahmad "Saya rasa masyarakat menginginkan penjelasan yang lebih detil."
+    ahmad "Pertama Mengapa harus ekonomi kerakyatan dan bagaimana kebijakan yang akan dibuat untuk mewujudkan ekonomi kerakyatan tersebut?"
+    ahmad "Yang kedua, Investasi Indonesia hari ini didominasi oleh penanaman modal asing."
+    ahmad "Padahal di dalam konstitusi ada pelaku ekonomi yang lain koperasi BUMN dan swasta."
+    ahmad "Bagaimana strategi dan kebijakan investasi yang Anda tawarkan sesuai dengan konteks ekonomi kerakyatan."
+    ahmad "Waktu anda 3 menit dimulai dari sekarang."
+    hide ahmad bicara
+
+    scene scene32prabowo with fade
+
+    show prabowodebat at centerdebat with dissolve
+    p "Terima kasih, saudara moderator."
+    p "Ekonomi kerakyatan tidak lain adalah ekonomi Jalan Tengah, ekonomi yang kita dasarkan kepada pasal 33 undang-undang Dasar 1945."
+    p "Yaitu bahwa perekonomian kita harus berasaskan kekeluargaan."
+    p "Kemudian bahwa sumber-sumber ekonomi yang menguasai hajat hidup orang banyak harus dikuasai oleh pemerintah."
+    p "Jadi konsepnya adalah bahwa ekonomi harus ditujukan kepada penguatan dan pemberdayaan kekuatan rakyat, tidak hanya pertumbuhan."
+    p "Kita juga harus menjamin kondisi keselamatan dan perlindungan terhadap golongan rakyat yang tertinggal yang kurang bisa mengikuti persaingan abad ke-21 ."
+    p "Kondisi keselamatan dan perlindungan terhadap golongan rakyat yang tertinggal yang kurang bisa mengikuti persaingan abad ke-21."
+    p "di kita pemerintah harus turun tangan harus jadi pelopor harus membela rakyatnya, tidak membiarkan kemiskinan,tidak membiarkan orang yang lemah Harus bersaing dengan yang kuat."
+    p "Kemudian iklim investasi kebijakan investasi kami terbuka kami mendukung investasi asing."
+    p "Tetapi tentunya tidak boleh mematikan ekonomi rakyat harus kita perkuat koperasi harus kita perkuat usaha kecil dan menengah."
+    p "Dan untuk itu kita mengalirkan dana yang lebih yang {i}massive{/i} yang tidak tanggung-tanggung untuk memperkuat ekonomi rakyat."
+    p "Ini adalah strategi kita dan ini sudah dirintis oleh pemerintah SBY dengan banyak program dengan kur dengan PM dengan juga Dana bergulir."
+    p "Sebagai contoh dana bergulir yang sampai sekarang 5 triliun bisa menghidupkan 12 juta orang bayangkan kalau kita tingkatkan 4 kali lipat."
+    p "20 Triliun tidak hanya 5 triliun."
+    p "Berarti 48 juta orang kita bisa dapat kehidupan."
+    p "Jadi kita tidak anti investasi asing. Silakan masuk ke Indonesia bawa uang. Jangan masuk ke Indonesia pakai uang Indonesia."
+    p "Itu bukan investasi asing namanya itu ya kan itu akan memakai pasar Indonesia."
+    p "Silakan masuk bawa uang, silakan Anda jadi kaya dari Indonesia kita tidak keberatan tapi intinya ekonomi untuk rakyat."
+
+    hide prabowodebat with easeoutright
+    stop music fadeout 1.5
+
+    scene scene32duduk with fade
+
+    show ahmad bicara at ahmadcenterfix
+    play music question2 volume 0.5 fadein 1.5
+    ahmad "Terima kasih Pak Prabowo selanjutnya pertanyaan kami berikan kepada capres nomor urut 2 Pak Joko Widodo."
+    ahmad "Tadi Bapak sudah menyampaikan visi mengenai ekonomi Berdikari."
+    ahmad "Saya rasa masyarakat juga menginginkan penjelasan yang lebih detail mengenai hal itu."
+    ahmad "Pertama, mengapa Indonesia harus Berdikari dibidang ekonomi dan bagaimana kebijakan yang akan dibuat untuk mewujudkan ekonomi Berdikari tersebut."
+    ahmad "Kedua, dalam konteks ekonomi Berdikari Bagaimana sikap Anda tentang utang pemerintah?"
+    ahmad "Disaat dalam beberapa tahun terakhir realisasi penerimaan pajak selalu lebih rendah dari target waktu anda 3 menit dimulai dari sekarang."
+
+    hide ahmad bicara
+
+    scene scene32jokowi with fade
+
+    show jokowidebat at centerdebat with dissolve
+
+    j "Terima Kasih."
+    j "Pembangunan Pasar tradisional pembangunan ruang-ruang untuk PKL saya kira saya sudah menjalani itu dan membuktikan itu."
+    j "Pengalaman saya membangun pasar waktu menjadi walikota, pengalaman saya membangun pasar waktu menjadi gubernur."
+    j "Saya menjadi sebuah pengalaman yang sudah dibuktikan bahwa yang kecil-kecilnya harus diurus PKL pedagang pasar."
+    j "Karena apa pasar tradisional adalah tempat produk-produk petani dijual."
+    j "Tempat produk-produk hasil tangkapan nelayan itu dijual, tempat pengrajin tempe pengrajin tahu itu menjual dagangannya ada di pasar tradisional. "
+    j "Kalau yang kecil-kecil ini diurus dengan baik tetapi dengan manajemen lapangan yang bener bukan hanya akan dan bukan hanya rencana,"
+    j "Dan bukan hanya sebuah wacana di awang-awang."
+    j "Tetapi harus dibuktikan, karena mereka ini membutuhkan bukti bahwa kita ini memang melakukan untuk mereka."
+    j "Jadi kalau ruang-ruang itu diberikan kepada pedagang pasar."
+    j "Mereka diberi tempat yang baik. Pasar harus bersih pasar, tidak boleh becek, pasar harus ada tempat parkir."
+    j "Pasar harus diberikan zoning-zoning basah dan kering buah sering sayur."
+    j "Saya kira Shakira produk-produk petani akan terus-menerus mendapatkan penghargaan"
+    j "Dan mereka akan mempunyai nilai tambah yang baik karena bisa menjual langsung kepada konsumen lewat pedagang pasar."
+    j "PKL juga sama PKL ini ekonomi mikro kita ekonomi kecil kita."
+    j "Tetapi di semua kota hampir tidak ada planning yang memberikan ruang kepada PKL untuk berjualan."
+    j "Oleh sebab itu di mana-mana mereka selalu terusir."
+    j "Dalam rencana ke depan semua kota harus memberikan ruang yang sebesar-besarnya bagi PKL artinya Space untuk PKL harus diberikan."
+    j "Kemudian mengenai ekonomi yang berkaitan dengan hutang."
+    j "Ini bisa kita selesaikan secara bertahap asal ada efisiensi di APBN kebocoran dan penyimpangan di APBN ini bisa di kurangi terus."
+    j "Dengan cara apa? "
+    j "Membangun sistem seperti yang sudah saya sampaikan pakai e-budgeting, pakai e-audit, pakai e-purchasing."
+    j "Itu bisa menyelesaikan persoalan-persoalan sehingga anggaran yang ada di APBN efektif efisien."
+    j "Dan sisa-sisa itulah yang kita pakai untuk menyelesaikan hutang-hutang yang ada."
+    j "Saya kira itu yang sudah saya sampaikan."
+
+    hide jokowidebat with easeinleft
+
+    scene scene32duduk with fade
+
+    show ahmad bicara at ahmadcenterfix
+    ahmad "Terima kasih Pak Joko Widodo"
+
+    ahmad "Itu tadi pertanyaan penajaman visi dan misi dan kita akan lanjutkan pada sesi berikutnya."
+    ahmad "Pemirsa kami akan kembali saat lagi dalam debat Capres 2014."
+    stop music fadeout 2.0
+
+    scene black with dissolve
+
+    jump chapter2_3
+
+    #add more splash
+
+    label chapter2_3:
+
+    show text "{=chapter_intro}Debat Sesi Ketiga \n Kemiskinan dan Pengganguran{/=chapter_intro}" with Dissolve(1):
+            xalign 0.5 yalign 0.5
+    pause 1.5
+
+    play music crowd volume 0.5
+    pause 3.0
+    stop music fadeout 2.0
+    
+
+    scene scene32duduk with fade
+
+    show ahmad bicara at ahmadcenterfix
+
+    ahmad "Anda kembali menyaksikan Debat Capres 2014 bagian kedua."
+    ahmad "Di sesi ini saya akan mengajukan pertanyaan yang sama untuk kedua calon Presiden."
+    ahmad "Masing-masing memiliki waktu 3 menit untuk kembali menjawab."
+
+    #play music
+
+    show ahmad serius at ahmadcenterfix
+    play music logic volume 0.5 fadein 2.0
+    ahmad "Kembali saya informasikan bahwa urutan penyampaian pertanyaan kepada calon presiden adalah sesuai dengan aturan dari KPU."
+    ahmad "Pertanyaan pertama untuk bapak Joko Widodo."
+
+    show ahmad bicara at ahmadcenterfix
+    ahmad "Kemiskinan dan pengangguran menjadi salah satu problem serius Indonesia hari ini."
+    ahmad "Padahal di dalam konstitusi ada amanat bagi pemerintah untuk menciptakan pekerjaan dan penghidupan yang layak bagi kemanusiaan."
+    ahmad "Pertanyaannya."
+    ahmad "Dalam hal kemiskinan anggaran dan program kemiskinan selama ini sangat besar, namun pengurangan kemiskinan relatif kecil."
+    ahmad "Apa yang salah dengan hal itu Dan bagaimana program Anda ke depan?"
+    ahmad "Kedua, dalam hal ketenagakerjaan"
+    ahmad "Bagaimana strategi dan sikap anda mengenai kebijakan penciptaan lapangan pekerjaan dan pengupahan?"
+    ahmad "waktu anda 3 menit dimulai dari sekarang."
+
+    hide ahmad bicara
+
+    #maybe add point here
+
+    scene scene32jokowi with fade
+
+    show jokowidebat at centerdebat with dissolve
+
+    j "Terima kasih."
+    j "Untuk masalah kemiskinan memang harus kita berani memberikan program-program khusus kepada masyarakat yang masih kurang beruntung."
+    j "Tetapi bukan hanya disiapkan anggarannya saja yang paling penting menurut saya adalah sistem yang dibangun, sistemnya dulu yang dibangun."
+    j "Oleh sebab itu kenapa waktu menjadi walikota dan menjadi gubernur kami berkonsentrasi selalu di bidang pendidikan dan kesehatan."
+    j "Karena apa? Dibawah keluhannya selalu itu."
+
+    stop music fadeout 1.0
+    play music choice
+
+
+    menu:
+            jpot "Oleh sebab itu..."
+
+            "Kartu Pintar Indonesia.":
+
+                jump kpi
+
+
+            "BPJS":
+
+                jump bpjs
+
+    label kpi:
+    stop music fadeout 3.0
+    $ debat_point +=2
+    j "Oleh sebab itu ke depan tadi saya sampaikan akan kita berikan yang namanya Kartu Indonesia Pintar seperti ini."
+
+    scene kartusehat with fade
+    play music objection
+    j "Untuk masyarakat anak-anak dari masyarakat yang kurang mampu akan kita berikan ini."
+    j "Ini sistem yang dibangun bukan menyiapkan anggaran saja."
+    j "Dan yang kedua juga akan kita kartu Indonesia sehat seperti ini yang diberikan kepada keluarga-keluarga yang tidak mampu."
+    j "Sehingga mereka bisa ke klinik Bisa ke klinik, bisa ke puskemas, bisa ke rumah sakit."
+
+    jump chapter2_3_1
+
+    label bpjs:
+
+    stop music fadeout 1.0
+    $ debat_point += 1
+    play music examination fadein 1.5
+    j "Oleh sebab itu saya akan sampaikan bahwa kita akan memberikannya yang namanya kartu Badan Penyelenggara Jaminan Sosial Kesehatan."
+    j "Untuk seluruh masyarakat indonesia kita akan berikan ini."
+    j "Sistem yang akan dibangun ini bukan hanya untuk menyiapkan anggaran saja."
+    j "Kartu ini akan mempermudah jaminan kesehatan di Indonesia. Sehingga mereka bisa ke klinik, puskemas, ataupun rumah sakit dengan jaminan tersebut."
+
+    jump chapter2_3_1
+
+    label chapter2_3_1:
+    scene scene32jokowi with dissolve
+
+    show jokowidebat at centerdebat with dissolve
+    j "Saya kira dukungan-dukungan seperti inilah sistem seperti inilah yang diperlukan rakyat bukan menganggarkan-menganggarkan larinya bisa ke mana-mana."
+    j "Tetapi sistem yang dibangun itu akan Memberikan jaminan bahwa anggaran itu sampai kepada masyarakat."
+
+    j "Kemudian yang berikutnya mengenai ketenaga kerjaan"
+    j "Investasi-investasi sangat penting bagi negara ini oleh sebab itu investasi ke depan merasa harus semua didorong menuju ke daerah-daerah."
+    j "Terutama di provinsi-provinsi yang tingkat kemiskinannya besar harus didorong ke sana."
+    j "Jangan sampai Pak investasi itu hanya berkisar di Jawa dan di Sumatera tetapi harus didorong ke wilayah-wilayah yang masih terjadi ketimpangan."
+    j "Juga infrastrukturnya harus disiapkan harus dorong menuju ke daerah-daerah ke provinsi-provinsi yang tingkat kemiskinannya besar."
+    j "Dengan cara itu yang ada di di daerah tidak menuju ke kota dengan cara itu yang miskin yang ada di daerah juga akan mendapatkan lapangan pekerjaan."
+    j "Mengenai upah Saya kira juga sudah saya buktikan waktu menjadi gubernur di Jakarta."
+    j "Saya kira orang pertama gubernur pertama yang berani menaikkan upah 44%% naiknya saat itu UMP kita."
+    j "Dan saya diprotes oleh banyak kalangan pengusaha saya sampaikan Kenapa diberikan kenaikan itu karena sudah 5 tahun tidak mengalami kenaikan yang signifikan."
+    j "Terima kasih."
+    stop music fadeout 1.0
+
+
+    hide jokowidebat with easeoutleft
+    play audio clap1 volume 0.5
+    pause 2.0
+    scene scene32duduk with fade
+
+    show ahmad bicara at ahmadcenterfix
+    ahmad "Terima kasih Pak Jokowi."
+    play music logic fadein 3.0
+    ahmad "Selanjutnya untuk Bapak Prabowo Subianto."
+    ahmad "Saya akan mengulangi pertanyaannya Pak kemiskinan dan pengangguran menjadi salah satu problem serius Indonesia saat ini."
+    ahmad "Padahal di dalam konstitusi terdapat amanat bagi pemerintah untuk menciptakan dan penghidupan yang layak bagi kemanusiaan."
+    ahmad "Kemanusiaan pertanyaannya pertama dalam hal kemiskinan anggaran dan program kemiskinan selama ini sangat besar."
+    ahmad "Namun pengurangan kemiskinan relatif kecil apa yang salah dengan hal itu dan bagaimana program Anda kedepan."
+    ahmad "Kedua dalam hal Ketenagakerjaan Bagaimana strategi dan sikap anda mengenai kebijakan penciptaan lapangan kerja dan pengupahan."
+    ahmad "Waktu anda 3 menit dimulai dari sekarang."
+    stop music fadeout 3.0
+
+    scene scene32prabowo with fade
+    pause 2.0
+    show prabowodebat at centerdebat with dissolve
+    
+    play music examination fadein 3.0
+    p "Terima kasih."
+    p "Jadi kemiskinan dan pengangguran ini adalah sasaran daripada strategi pembangunan ekonomi kami."
+    p "Strategi kami mengandalkan atau memfokuskan pembangunan pada sektor pertanian dahulu."
+    p "Kenapa pertanian? Karena pertanian bisa menyerap tenaga kerja yang banyak dalam waktu yang singkat."
+    p "Kemudian pertanian bisa menghasilkan dalam waktu yang singkat pula."
+    p "Sebagai contoh beras padi bisa dihasilkan dalam kurang 100 ke demikian juga jagung 120 hari."
+    p "Kemudian kita juga punya benih-benih yang unggul lainnya yang bisa kurang dari 1 tahun bisa banyak menghasilkan uang dan penghasilan."
+    p "Dari strategi Kami adalah pertama di sektor pertanian, ini bisa menyerap banyak sekali lapangan kerja."
+    p "Ukurannya sekarang benchmark nya adalah 1 hektar bisa menyerap 6 orang bekerja dari hulu sampai hilir."
+    p "Di Sulawesi Utara kadang-kadang 1 ha bisa 12 orang bekerja"
+    p "Bayangkan sekarang kita masih punya 77 juta hektar hutan yang sudah rusak, sudah rusak dan kerusakan hutan bertambah terus."
+    p "Strategi kami adalah sebagian dari hutan yang rusak itu kita rubah jadi lahan produksi jadi Sawah Baru."
+    p "Kami merencanakan dua juta hektar Sawah Baru. Dua juta hektar Sawah Baru ditambah 2000000 hektar untuk Bayu etanol."
+    p "Kita bisa bayangkan 4 juta hektar * 6 orang bekerja itu adalah 24 juta orang bekerja dalam 5 tahun."
+    p "Tahun itu jawaban kami terhadap masalah kemiskinan orang yang tidak punya apa-apa tiba-tiba punya penghasilan dan penghasilannya juga tidak sedikit."
+    p "Karena sasaran kita adalah tanaman yang bisa dapat harga yang baik."
+    p "Selanjutnya tenaga kerja."
+    p "Kita dengan dorongan ekonomi yang akan tumbuh dengan pesat dan tinggi ini juga akan menumbuhkan dan mengurangi pengangguran."
+    p "Dan juga upah dengan sendirinya akan bisa kita naikkan karena kita dapat kelebihan uang."
+    p "Masalahnya ini adalah sekarang Indonesia harus meningkatkan produktivitasnya, kita tidak bisa hanya kerja sedikit-sedikit."
+    p "Kita harus berpikir besar dengan strategi yang besar untuk kita mencapai hasil hasil yang besar."
+    p "Terima kasih."
+
+    hide prabowodebat with easeoutright
+    stop music fadeout 3.0
+
+    scene scene32duduk with fade
+    pause 2.0
+
+    show ahmad bicara at ahmadcenterfix with dissolve
+
+    play music question fadein 5.0
+    ahmad "Terima kasih Pak Prabowo."
+    ahmad "Baik selanjutnya pertanyaan kedua untuk Bapak Prabowo Subianto."
+    ahmad "Salah satu masalah Indonesia saat ini adalah pertumbuhan penduduk yang dinilai relatif tinggi."
+
+    show ahmad serius at ahmadcenterfix
+    ahmad "Sementara itu kasus angka kematian ibu melahirkan naik dalam beberapa tahun terakhir."
+    ahmad "Dengan latar belakang tersebut pertanyaannya bagaimana kebijakan anda untuk mengendalikan pertumbuhan penduduk?"
+
+    show ahmad bicara at ahmadcenterfix
+    ahmad "Berikutnya Bagaimana strategi anda untuk meningkatkan pelayanan dan akses kesehatan khususnya bagi perempuan."
+    ahmad "Waktu anda 3 menit mulai dari sekarang."
+
+    stop music fadeout 2.0
+
+    show scene32prabowo with fade
+    pause 2.0
+
+    show prabowodebat at centerdebat with dissolve
+    play music question2 volume 0.75 fadein 2.0
+    p "Benar sekali saudara moderator."
+    p "Penambahan penduduk kita sangat luar biasa terjadi ledakan penduduk 5 juta orang tiap tahun lahir."
+    p "Justru itulah strategi kami tutup kebocoran amankan kekayaan negara dapat uang kas, uang kas tunai ini kita investasikan kepada kesehatan dan pendidikan."
+    p "Dengan kesehatan dan pendidikan kita menumbuhkan kesadaran masyarakat dengan cara persuasif untuk menerima program program Keluarga Berencana."
+    p "Mau tidak mau kita harus tingkatkan kembali Program Keluarga Berencana."
+    p "Kita harus investasi di Puskesmas Puskesmas di Posyandu Posyandu."
+    p "Kita tambah jumlah dokter kita perbaiki gaji dokter gaji perawat gaji bidan ini kita tidak boleh tanggung-tanggung."
+    p "Makanya tadi saya katakan strategi Kami adalah strategi dorongan besar debit kita tidak bisa main-main dengan pantangan-pantangan yang kita hadapi sekarang."
+    p "Demikian juga untuk mengurangi angka kematian ibu-ibu"
+    p "Sekali lagi investasi besar-besaran Posyandu Puskesmas rumah sakit rumah sakit perbaiki gaji dokter perbaiki gaji perawat ini semua membutuhkan uang."
+    p "Dari mana uangnya dari produktifitas yang kita akan ciptakan dari penghematan kebocoran yang 1000 Triliun tadi ini adalah strategi besar kita."
+    scene sceneprabowospeech with dissolve
+    show prabowodebat at centerdebat with dissolve
+    p "Jadi saudara moderator dan saudara-saudara sekalian. Kita mengerti tentang tantangan yang kita hadapi"
+    p "Sekarang adalah bagaimana cara apa strategi mana yang kita harus lakukan."
+    p "Ini membutuhkan suatu keberanian ini membutuhkan kerja keras Ini Membutuhkan disiplin yang luar biasa."
+    p "Tetapi saya percaya totalitas daripada rencana yang besar ini tidak bisa kita lihat sepotong tapi totalitas."
+    p "Kita amankan kebocoran uang yang kita hemat investasi di lahan lahan dan sektor produktif."
+    p "Bangun pabrik bangun irigasi bangun Waduk bangun Jalan Raya bangun kereta api ribuan kilometer."
+    p "Ini semua akan menumbuhkan roda ekonomi pertumbuhan kita akan sangat tinggi."
+    p "Dan dengan demikian uang kita untuk kita investasikan ke Posyandu program-program untuk bidan untuk poliklinik Puskesmas bisa berjalan."
+    p "Kita akan punya uang untuk kita investasikan di bidang kesehatan dan pendidikan. Saya kira itu terima kasih."
+
+    hide prabowodebat with easeoutright
+    stop music fadeout 3.0
+    play audio clap2 volume 0.25
+
+    scene scene32duduk with dissolve
+    show ahmad bicara at ahmadcenterfix with dissolve
+
+    play music logic volume 0.75 fadein 3.0
+    ahmad "Terima kasih Pak Prabowo, selanjutnya Bapak Joko Widodo."
+    ahmad "Sebelum itu saya akan mengulang pertanyaannya."
+    ahmad "Indonesia dinilai memiliki pertumbuhan penduduk yang cukup tinggi sementara itu kasus angka kematian ibu melahirkan naik dalam beberapa tahun terakhir."
+    ahmad "Pertanyaannya, Bagaimana kebijakan anda untuk mengendalikan pertumbuhan?"
+
+    show ahmad serius at ahmadcenterfix
+    ahmad "Berikutnya, bagaimana strategi anda untuk meningkatkan pelayanan dan akses kesehatan khususnya bagi perempuan?"
+
+    show ahmad bicara at ahmadcenterfix
+    ahmad "Waktu anda 3 menit dimulai dari sekarang."
+
+    scene scene32jokowi with fade
+
+    show jokowidebat at centerdebat with dissolve
+
+    j "Terima kasih."
+    j "Jadi kembali lagi kita harus melihat BKKBN (Badan Kependudukan dan Keluarga Berencana Nasional) kita."
+    j "Ini harus dihidupkan dan diaktifkan kembali sehingga mereka berkampanye untuk masalah kelahiran, masalah pertumbuhan penduduknya harus dimulai lagi."
+    j "Mulai dari bawah kampanye dimulai dari bawah lagi sehingga masyarakat sadar ada kesadaran bahwa 2 anak itu cukup."
+    j "Karena sekarang ini kenapa mereka kembali ke anak yang 3 dan 4 dan 5 karena kampanye kita kampanye mengenai kelahiran ini mulai menurun kembali."
+    j "Oleh sebab itu BKKBN sebagai institusi yang membidangi itu harus diperkuat lagi "
+    j "Baik anggaran yang baik untuk terjun ke bawah sehingga masyarakat sadar bahwa 2 anak itu cukup."
+    j "Kok dua terus!?"
+    j "Kemudian mengenai angka kematian ibu yang naik dan layanan kesehatan bagi perempuan."
+    j "Tadi sudah saya sampaikan tetapi perlu saya ulang lagi bahwa ini adalah membangun sistem."
+    j "Membangun sistem dan mengontrol sistem itu dengan cara apa ya dengan sistem kartu ini."
+    j "Anggarannya ada tetapi kalau sistem yang tidak dibangun,"
+    j "Sistemnya tidak ada manajemen pengawasan yang baik, sistemnya tidak dikontrol di lapangan, percuma anggaran itu akan menguap ke mana-mana."
+    j "Mana kita dengan anggaran yang ada sekarang saya tidak usah muluk-muluk kita harus apa tinggi-tinggi mempunyai ini maunya ini."
+    j "Tetapi acara yang ada sekarang ini dimana dikelola dengan sebuah sistem yang baik dikontrol."
+    j "Dan dibelikan alat-alat yang riil yang tepat gula yang dibutuhkan masyarat."
+    j "Iva test misalnya, Ibu-ibu bisa ke Puskesmas untuk Iva test cek apakah kanker rahim atau tidak."
+    j "Ini penting sekali, larinya akan kesana dan juga ke rumah sakit."
+    j "Kalau ibu-ibu pegang ini kartu Indonesia sehat mereka akan secara rutin bisa cek ke Puskesmas,"
+    j "Bisa cek ke rumah sakit dengan tidak dipungut biaya."
+    j "Anggarannya ada. Jadi jangan apa, membayangkan bahwa kita membutuhkan anggaran yang bertriliun-triliun"
+    j "Anggaran yang ada hanya sistem yang baru dibangun terima kasih."
+
+    hide jokowidebat with easeinleft
+    play audio clap1 volume 0.25
+
+    scene scene32duduk with fade
+
+    show ahmad bicara at ahmadcenterfix with dissolve
+    stop music fadeout 3.0
+
+    ahmad "Terima kasih Pak Joko Widodo."
+    ahmad "Pemirsa kami akan jeda sejenak jangan ke mana-mana dulu Debat Capres 2014 akan kembali lagi."
+
+    scene black with dissolve
+
+    jump chapter2_4
+    #addsplashhere
+
+    label chapter2_4:
+
+    show text "{=chapter_intro}DEBAT SESI KEEMPAT\nSESI TANYA JAWAB{/=chapter_intro}" with Dissolve(1):
+        xalign 0.5 yalign 0.5
+    pause 1.5
+
+    scene scene32duduk with fade
+    play music crowd volume 0.5
+    pause 3.0
+    stop music fadeout 3.0
+
+    show ahmad bicara at ahmadcenterfix with dissolve
+    ahmad "Kembali di Debat Capres 2014."
+    play music investigation volume 0.4
+    ahmad "2014 Nah ini sesi yang sangat menarik karena kedua calon diberikan kesempatan untuk saling bertanya."
+    ahmad "Masing-masing calon bisa menanyakan tiga kali."
+    ahmad "Setiap pertanyaan disampaikan dalam waktu 1 menit dan jawaban dalam waktu 3 menit."
+
+    show ahmad serius at ahmadcenterfix
+    ahmad "Kesempatan pertama untuk bertanya adalah Bapak Joko Widodo."
+    stop music fadeout 3.0
+    ahmad "Silakan waktunya 1 menit dari mulai sekarang."
+
+    #go wild here lol
+
+
+    scene scene32jokowi with dissolve
+    play music choice fadein 2.0
+
+    menu:
+        jpot "Bapak Prabowo..."
+        "Tanya mengenai DAU dan DKK.":
+
+            jump daudkk
+
+        "Tanya mengenai kesejahteraan Indonesia di bidang Kompetisi Internasional.":
+
+            jump kompint
+
+
+
+label daudkk:
+    $ debat_point += 1
+    play music examination fadein 2.0
+    show jokowidebat at centerdebat with dissolve
+    j "Bapak Prabowo, saya ingin menanyakan bagaimana pandangan Bapak mengenai DAU dan DKK? Terima kasih."
+
+    ahmadpot "Pak Prabowo 3 menit waktu jawaban anda dimulai dari sekarang."
+
+    show jokowidebat at leftdebat with move
+
+    show prabowodebat at rightdebat with easeinright
+
+    p "Baik Terima kasih."
+    p "DAU dan DKK, Dana Alokasi Umum dan Dana Alokasi Khusus itu harus kita tingkatkan untuk daerah-daerah."
+    p "Daerah itu hanya bisa kita lakukan kalau penghasilan negara tambah."
+    p "Jadi dana ke daerah dana ke Kabupaten dana ke Kecamatan dan ke desa bisa naik, Kalau penghasilan negara naik"
+    p "Inilah yang saya sudah bertahun-tahun berjuang di mana-mana."
+    p "Bagaimana caranya penghasilan Indonesia tidak bocor ke luar negeri."
+    p "Selama ini sumber-sumber ekonomi kita dikuasai oleh sebagian besar orang asing atau perusahaan perusahaan asing."
+    p "Jadi nilai tambah dari kekayaan kita keluar."
+    p "Bagaimana kita akan tambahkan dia DAK dan DAU kalau uangnya selalu pas-pasan."
+    p "Ini inti dari pada masalah."
+    p "Jadi saya menganjurkan kepada seluruh bangsa Bagaimana caranya kita Bisa mengamankan kekayaan negara itu."
+    p "Saru kita alirkan dana ke daerah-daerah untuk mempercepat pembangunan."
+    play audio clap3
+    jump chapter2_4_1
+
+label kompint:
+    $ jokowi_petinju = True
+    play music examination fadein 2.0
+    show jokowidebat at centerdebat with dissolve
+    j "Bapak Prabowo, saya ingin menanyakan bagaimana pandangan bapak tentang kesejahteraan Indonesia di bidang Kompetisi Internasional."
+
+    ahmadpot "Pak Prabowo 3 menit waktu jawaban anda dimulai dari sekarang."
+
+    show jokowidebat at leftdebat with move
+
+    show prabowodebat at rightdebat with easeinright
+
+    p "Baik Terima kasih."
+    p "Mengenai kesejahteraan Indonesia di bidang kompetisi Internasional, Indonesia menurut saya masih tergolong cukup baik."
+    p "Bidang-bidang tersebut dapat tergolong kedalam bentuk olahraga, industri, edukasi, hiburan, dan lain sebagainya."
+    p "Tetapi Indonesia dapat memaksimalkan bidang-bidang tersebut, kenapa?"
+    p "Alasannya ialah pemerintah kurang mendukung bidang-bidang tersebut walaupun sumber daya manusia sudah ada."
+    p "Jadi selama ini banyak bakat-bakat yang sudah ada namun tidak terpakai ataupun mereka malah lari keluar negeri demi mendapat hasil yang baik."
+    p "Jadi saya menganjurkan kepada seluruh bangsa bagamaina caranya kita bisa memakai bakat-bakat itu agar tidak tersia-siakan."
+    p "Nah, Mungkin Bapak Jokowi sendiri berkenan untuk menjadi salah satu orang yang mempunyai bakat dalam bidang-bidang tertentu,"
+    p "Seperti Petinju dan Tukang Mabel."
+    #play audio
+
+    jump chapter2_4_1
+
+
+label chapter2_4_1:
+
+    p "Saya kira itu terima kasih."
+
+
+    hide prabowodebat
+    with easeoutright
+    hide jokowidebat
+    with easeoutleft
+
+    ahmadpot "Waktunya Masih Ada Waktu Prabowo."
+    ahmadpot "Pak Prabowo masih ada waktu."
+    ahmadpot "Cukup?"
+    ahmadpot "Oke. Berikutnya kami persilahkan kepada Pak Prabowo untuk gantian menyampaikan pertanyaan kepada Bapak Joko Widodo."
+    ahmadpot "Waktunya 1 menit dari mulai sekarang."
+
+    scene scene32prabowo with dissolve
+
+    show prabowodebat at centerdebat with dissolve
+
+    p "Pak Joko Widodo, kita mengerti bahwa kondisi ekonomi dunia kurang menguntungkan akhir-akhir ini."
+    p "Bahwa kondisi ekonomi dunia kurang menguntungkan akhir-akhir ini."
+    p "Pertumbuhan ekonomi dunia kurang lebih sekarang 3.3%%."
+    p "Indonesia agak lumayan tahun ini masih di atas 5%%."
+    p "Kalau seandainya Bapak Terima mandat dari rakyat apa target pertumbuhan ekonomi yang canangkan."
+    p "Dan bagaimana strategi Bapak untuk mencapai pertumbuhan ekonomi yang bapak targetkan itu, Terima kasih."
+
+    ahmadpot "Pak Joko Widodo Silakan menjawab waktunya 3 menit dimulai dari sekarang."
+
+    show prabowodebat at rightdebat with easeinright
+
+    show jokowidebat at leftdebat with easeinleft
+
+    j "Terima kasih Pak Prabowo."
+    j "Kedepan saya meyakini bahwa ekonomi kita akan bisa tumbuh di atas 7%% dengan catatan-catatan."
+    j "Yang pertama. Iklim investasi beserta regulasinya itu betul-betul terbuka,"
+    j "Dan memberikan kesempatan kepada investor lokal untuk bergerak menciptakan sebuah pertumbuhan ekonomi "
+    j "Kemudian yang kedua di bidang perizinan."
+    j "Perizinan yang Terlalu lama seperti yang kita lihat sekarang ini harus berani kita pangkas secepat-cepatnya"
+    j "Agar investasi yang hadir di dalam Pergerakan ekonomi kita itu betul-betul kelihatan mereka dilayani dan disambut"
+    j "IMB misalnya, bisa online. SIUP, online. TDP, bisa online."
+    j "Saya cara-cara sistem seperti itu kalau kita lakukan"
+    j "Dan investor diberikan kesempatan untuk membuka lapangan pekerjaan untuk membuka investasi terutama di daerah-daerah."
+    j "Saya yakin Insyallah 7%% bukan sesuatu yang sesuatu yang sulit."
+    j "Kemudian yang ketiga, arah industri yang ke e-sport harus dibuka seluas-luasnya harus diberikan insentif yang sebesar-besarnya."
+    j "Industri-industri apa, industri kecil yang ada di desa-desa industri industri rumah tangga."
+    j "Yang ada di kampung-kampung produk mereka bisa kompetisi di dunia."
+    j "Asal mereka diberikan ruang untuk memasarkan barangnya."
+    j "Oleh sebab itu ke depan Menurut saya dubais-dubais kita juga jangan hanya diplomasi saja,"
+    j "Tetapi dia mereka beliau beliau harus juga menjadi marketingnya negara."
+    j "Mereka harus bisa memasarkan produk-produk dari desa produk-produk dari kampung-kampung yang mempunyai kualitas internasional."
+    j "Saya kira kesempatan itu sangat terbuka karena kompetisi mereka bisa berkompetisi, harganya kompetitif, kualitasnya juga baik."
+    j "Baik hanya memerlukan dorongan dari pemerintah."
+    j "Dengan cara-cara seperti itu hahaha yang konkret seperti inilah seekor yang dibutuhkan oleh negara ini."
+    j "Dan saya meyakini saya ada 28 tahun di industri kecil, di industri Kampung dan saya meyakini ini bisa kita laksanakan asal negara hadir."
+    j "Terima kasih."
+    play audio clap2
+
+    hide jokowidebat with easeoutleft
+    hide prabowodebat with easeoutright
+
+    scene scene32duduk with dissolve
+
+    ahmadpot "Baik terima kasih."
+    ahmadpot "Selanjutnya Pak Joko Widodo silakan bertanya kembali waktu anda 1 menit dimulai dari sekarang."
+
+    scene scene32jokowi with dissolve
+
+    show jokowidebat at centerdebat with dissolve
+
+    j "Bapak Prabowo tadi Bapak kelihatannya banyak menyampaikan bahwa uang kita ini banyak."
+    j "Tetapi kalau kita lihat dalam 2 tahun ini"
+    j "Dalam 2 tahun ini yang namanya defisit perdagangan dan juga defisit APBN terjadi dalam 2 tahun ini."
+    j "Apa yang salah Menurut bapak dan hari ini? Terima kasih."
+
+    ahmadpot "Pak Prabowo kami berikan kesempatan untuk menjawab dimulai dari sekarang."
+
+    show jokowidebat at leftdebat with easeinleft
+
+    show prabowodebat at rightdebat with easeinright
+
+    p "Terjadi defisit perdagangan dan defisit anggaran justru yang saya sebut tadi karena kekayaan negara bocor ke luar negeri"
+    p "Ya esensinya itu."
+    p "Esensinya itu Pak Jokowi."
+    p "Karena kekayaan negara keluar, Kenapa keluar?"
+    p "karena sebagai contoh kita punya persediaan crude oil minyak bumi sudah juga menurun."
+    p "Kita tambah impor harga crude oil harga minyak bumi naik di dunia 100 dolar per bero."
+    p "Jadi beban untuk impor kita sangat tinggi itulah terjadi defisit perdagangan."
+    p "Defisit anggaran sama, kebutuhan-kebutuhan kita,{w} janji-janji para pemimpin.{w} sebagaimana juga bapak terus keluarkan."
+    p "Kartu ini dan kartu itu "
+    p "Itu bapak bilang ada anggaran yang anggarannya ujung-ujungnya kan dari APBN."
+    p "Apbn dari mana APBN tidak jatuh dari langit. APBN itu dari kekayaan negara dan kekayaan negara kita sekarang bocor."
+    p "Pak Jokowi Widodo itu esensinya."
+    p "Ini yang saya perjuangkan kepada seluruh Indonesia{w}, kekayaan kita bocor."
+    p "Ketua KPK ketua KPK 7 September 2013 mengatakan bocornya 7000 triliun, Pak persisnya 7200 triliun."
+    p "Itu angka beliau. Angka saya 1134 triliun bocornya."
+    p "Jadi kalau Bapak tanya kenapa defisit perdagangan dan kenapa defisit APBN itu intinya."
+    p "Harus ada pemerintah yang berani untuk menutup kebocoran itu baru kita tidak defisit."
+    p "Bahkan kita bisa surplus kita nanti jadi negara macan Asia kembali. Terima kasih."
+
+    play audio clap1 volume 0.25
+
+    hide jokowidebat with easeoutleft
+    hide prabowodebat with easeoutright
+
+    ahmadpot "Baik terima kasih."
+    ahmadpot "Selanjutnya Pak Prabowo kami berikan kesempatan sekali lagi untuk memberikan pertanyaan kepada Pak Joko Widodo."
+    ahmadpot "Mulai dari sekarang."
+
+    scene scene32prabowo with dissolve
+
+    show prabowodebat at centerdebat with dissolve
+
+    p "Sebagaimana kita ketahui bahwa pendidikan sangat penting."
+    p "Selama ini kita sekarang wajib belajar 9 tahun. "
+    p "Saya bertanya apakah saudara Joko Widodo setuju bahwa wajib belajar harus 12 tahun?"
+    p "Dan apabila setuju para pakar mengatakan ini Butuh tambahan biaya sekitar 40 triliun."
+    p "Apakah Bapak Joko Widodo juga setuju dengan penambahan ini yang sanggup untuk mendukung gagasan ini?"
+    p "Wajib belajar 12 tahun dengan peningkatan investasi di bidang pendidikan tambahan 40 triliun? Terima kasih."
+
+    ahmadpot "Pak Joko Widodo silakan untuk menjawab dimulai dari sekarang."
+
+    show prabowodebat at rightdebat with easeinright
+
+    show jokowidebat at leftdebat with easeinleft
+
+    j "Terima kasih."
+    j "Tadi depan sudah saya sampaikan bahwa pembangunan manusia itu di mulai dari bidang pendidikan."
+    j "Oleh sebab itu pendidikan menjadi hal yang utama bagi kami, tetapi memang pendidikan ini harus ada evaluasi dan harus ada perubahan."
+    j "Menurut kami pendidikan di tingkat SD itu 80%% Harus,"
+    j "Berbicara masalah yang berkaitan dengan pendidikan karakter, pendidikan akhlak, pendidikan mental pembangunan sikap dan mental."
+    j "Baru yang 20 itu yang pengetahuan."
+    j "Yang di SMP 60 40. 60 itu adalah pendidikan karakter 40nya pengetahuan."
+    j "Di SMA SMK baru 20 80. 80nya pengetahuan dan 20nya keterampilan."
+    j "Dengan cara Inilah kita akan mendapatkan manusia-manusia punya sikap mental, mempunyai etos kerja, mempunyai budaya kerja."
+    j "Sehingga kedepan Apabila lakukan, kita akan mempunyai manusia-manusia yang mempunyai produktivitas tinggi dan mempunyai daya saing tinggi."
+    j "Oleh sebab itu sekali lagi pendidikan merupakan hal yang utama yang tidak bisa ditawar-tawar."
+    j "Berapa pun yang dibutuhkan untuk pendidikan dalam rangka investasi,"
+    j "Kita kedepan dalam rangka produktivitas, dalam rangka daya saing, itu akan kita berikan "
+    j "Apalagi hanya 40 triliun. 40 triliun ini bisa dicari. Gampang sekali."
+    j "Asal, efisiensi di bidang kelistrikan bisa kita lakukan, dari BBM diganti kepada gas."
+    j "Dari BBM diganti kepada batubara, itu sudah menghemat itu kan kami 70 triliun."
+    j "Bisa kita hemat dari situ masukkan saja ke bidang pendidikan nggak ada masalah 12 tahun merupakan hal yang menjadi kewajiban kita bersama,"
+    j "Agar sekali lagi kita mempunyai manusia-manusia Indonesia yang punya produktivitas yang tinggi mempunyai daya yang tinggi."
+    j "Sehingga kekayaan alam yang ada di negara kita ini dikelola oleh kita sendiri, orang-orang Indonesia, warga negara Indonesia "
+    j "Dan itu bisa kita lakukan kalau kita mempunyai manusia yang hobinya pendidikan mempunyai produktivitas dan yang mempunyai daya saing baik."
+    j "Terima kasih."
+
+    hide jokowidebat with easeoutleft
+    hide prabowodebat with easeoutright
+
+    ahmadpot "Baik selanjutnya pertanyaan ketiga dari bapak Joko Widodo."
+    ahmadpot "Waktunya 1 menit dimulai dari sekarang."
+    stop music fadeout 3.0
+
+    #optionhere
+    scene scene32jokowi with dissolve
+
+    show jokowidebat at centerdebat with dissolve
+
+    j "Terima kasih."
+    j "Bapak Prabowo. Kami ingin bertanya."
+    play music choice fadein 2.0
+    menu:
+            jpot "Bagaimana Menurut Bapak Prabowo tentang..."
+            "Peran TPID":
+
+                jump TPID
+
+            "Peran Politik untuk Rakyat":
+
+                jump politikrakyat
+
+label TPID:
+    $ debat_point += 3
+    stop music fadeout 3.0
+    j "Bagaimana cara meningkatkan peran."
+    show jokowidebat at centerdebat with flash
+    play music pursuit volume 0.75
+    j "Ini soal rakyat ini. Bagaimana cara meningkatkan peran TPID."
+    #playmusic
+    #playaudio
+    j "Terima kasih."
+    ahmadpot "Pak Prabowo-"
+    show jokowidebat at leftdebat with moveinleft
+    show prabowodebat at rightdebat with moveinright
+    show prabowodebat at Shake((0.70, 0.45, 0.5, 0.5), 1.0, dist=5)    
+    p "Pak Prabowo singkatan TPID, Bagaimana Pak?"
+    show jokowidebat at leftdebatmaju with ease
+    j "TPID ini untuk Tim Pengendalian Inflasi Daerah Pak Prabowo, Terima Kasih."
+    show jokowidebat at leftdebat with ease
+    ahmadpot "Iya, silakan Pak Prabowo." 
+    show prabowodebat at Shake((0.70, 0.45, 0.5, 0.5), 1.0, dist=3) 
+    p "Iya, Sayakan tidak menguasai setiap singkatan." 
+    
+    play audio laugh volume 0.5 fadein 2.0
+    "{cps=10}Hadirin tertawa kecil...{/cps}" 
+    
+    p "Bagaimana meningkatkan peranan?"
+    p "TPID, kalau itu adalah fungsi daripada pemerintahan."
+    p "Bagaimana meninggalkan peran yaitu adalah tugas seorang kepala daerah untuk meningkatkan perannya itu."
+    p "Itu kan tim pengendalian berarti kalau mau ditinggalkan perannya yaitu fungsi dari pada kepemimpinan dan manajemen pada kepala daerah masing-masing"
+    p "Saya kira itu, Terima Kasih."
+    play audio clap1 volume 0.5
+
+    jump chapter2_4_2
+
+label politikrakyat:
+    $ debat_point += 1
+    stop music fadeout 2.0
+    j "Bagaimana cara meningkatkan peran rakyat."
+    play music objection volume 0.75
+    j "Pertanyaan ini mengenai rakyat. Bagaimana cara meningkatkan peran Politik untuk Rakyat"
+    #playmusic
+    #playaudio
+    j "Terima kasih."
+    ahmadpot "Pak Prabowo silahkan menanggapi waktunya 3 menit dimulai dari sekarang"
+    show jokowidebat at leftdebat with moveinleft
+    show prabowodebat at rightdebat with moveinright
+    p "Bagaimana meningkatkan peranan Politik untuk rakyat?"
+    p "Peran Politik untuk rakyat dapat dikembangkan melalui pendidikan dimana, seluruh warganegara dapat sadar,"
+    p "Dan dapat meningkatkan pengetahuannya dalam berpolitik, mengenal dan memahami nilai-nilai ideal yang terkandung dalam sistem politik yang sedang diterapkan,"
+    p "Memaksimalkan hak mereka, melaksanakan kewajiban mereka, dan juga turut berpartisipasi dalam segala bentuk aktivitas politik."
+    scene sceneprabowospeech2 with fade
+    p "Pendidikan politik adalah tugas negara, sebaiknya tidak disalahgunakan untuk mendoktrin rakyat."
+    p "Saya kira itu, Terima Kasih."
+    scene scene32duduk with dissolve
+    play audio clap1 volume 0.5
+
+
+    jump chapter2_4_2
+
+label chapter2_4_2:
+
+    hide jokowidebat with easeoutleft
+    hide prabowodebat with easeoutright
+
+    ahmadpot "Waktunya masih ada Pak Prabowo."
+    ahmadpot "Cukup? Oke."
+    stop music fadeout 3.0
+    ahmadpot "Baik sekarang pertanyaan ketiga dari Pak Prabowo Subianto, silakan."
+    ahmadpot "Dimulai dari sekarang."
+    
+    scene scene32prabowo with dissolve
+
+    show prabowodebat at centerdebat with dissolve
+    play music suspense fadein 2.0
+    p "Pak Joko Widodo dari paparan Bapak dan pembicaraan Bapak."
+    p "Tidak kedengeran tentunya mungkin sudah ada perencanaannya tapi tidak dibahas tentang Infrastruktur."
+    p "Negara kita sangat besar, tantangan bagi bangsa kita sangat sangat besar."
+    p "Bagaimana kita mau meningkatkan daya saing meningkatkan pertumbuhan ekonomi kalau bapak tidak membahas sama sekali tentang infrastruktur."
+    p "Infrastruktur Tolong berikan gambaran Apa rencana Bapak tentang infrastruktur ini, Jalan Raya kereta api pelabuhan dan sebagainya."
+    p "Terima Kasih."
+
+    ahmadpot "Silahkan Pak Joko Widodo, mulai dari sekarang."
+
+    show prabowodebat at rightdebat with easeinright
+
+    show jokowidebat at leftdebat with easeinleft
+
+    j "Terima kasih Pak Prabowo."
+    j "Saya kira di depan tadi sudah saya sampaikan infrastruktur tapi memang belum kita jelaskan."
+    j "Infrastruktur di negara kita ini untuk saya ke depan yang paling penting adalah tol laut."
+    j "Tol laut ini penting sekali. Sehingga yang namanya Kapal dari barat sampai ke timur, dari ujung Sumatera sampai Nantinya di Papua, itu selalu ada."
+    j "Bolak-balik bolak-balik."
+    j "Kenapa? Ini harus ada karena yang kita lihat."
+    j "Semen yang ada yang ada di Jawa harganya Rp50.000-Rp60.000 di Papua bisa 1,2 juta bisa 1 juta bisa 1,5 juta, bisa Rp500.000."
+    j "Kalau tol laut ini kita bangun di Seaport."
+    j "Di seaport kita bangun di Sumatera, di Seaport kita bangun di Jawa, di seaport di kita bangun di Kalimantan, di seaport disebut kita bangun di Sulawesi"
+    j "Di seaport kita bangun di Papua."
+    j "Ini akan memberikan rasa keadilan."
+    j "Karena nantinya harga semen di Sumatera di Jawa di Kalimantan di Sulawesi di Nusa Tenggara di Papua itu akan sama atau hampir sama."
+    j "Tidak seperti sekarang, ada sebuah harga yang sangat berbeda sekali. Karena infrastruktur tidak dibangun berdasarkan kelautan."
+    j "Harga yang sangat berbeda sekali karena infrastruktur tidak dibangun berdasarkan kelautan."
+    j "Kemudian yang kedua yaitu laut. Transportasi laut merupakan transportasi yang sangat murah. Saya berikan contoh lagi."
+    j "Saya ini pelaku mengirim kontainer dari Jawa ke Eropa dengan dari Jawa ke Papua, itu lebih mahal dari Jawa ke Papua."
+    j "Karena nggak ada tol laut, nggak ada kapal besar yang selalu wira-wiri dari ujung barat ke ujung timur."
+    j "Yang kedua, yang murah untuk manajemen distribusi logistik selain tol laut."
+    j "Yang kedua adalah double track kereta api baik yang ada di Sumatera baik yang ada di Jawa yang di Kalimantan di Papua."
+    j "Double track kereta api ini penting sekali karena ide angkutan yang sangat murah selain tadi kapal."
+    j "Oleh sebab itu Uang yang ada harus dikonsentrasikan kepada infrastruktur yang menyangkut hajat hidup rakyat banyak."
+    j "Tol laut kereta api itu menjadi penting bagi kita semuanya. Tidak hanya untuk distribusi logistik,"
+    j "Tetapi juga bisa mengangkut orang dengan biaya yang sangat murah."
+    j "Saya Kira itu terima kasih."
+    play audio clap1 volume 0.5
+    play audio clap2 volume 0.5
+    stop music fadeout 2.0
+
+
+    scene scene32duduk with fade
+    show ahmad bicara at ahmadcenterfix with dissolve
+    ahmad "Terima Kasih."
+    ahmad "Kedua calon presiden dapat melanjutkan sesi pertanyaan ini Setelah rehat berikut ini. "
+    ahmad "Tetaplah bersama kami di depan capres 2014."
+    
+
+    scene black with dissolve
+
+    jump chapter2_5
+
+label chapter2_5:
+
+    show text "{=chapter_intro}{k=.5}DEBAT SESI KE LIMA\nSESI SALING TANYA DAN MENANGGAPI{/k=}{/=chapter_intro}" with Dissolve(1):
+            xalign 0.5 yalign 0.5
+    pause 1.5
+
+    scene scene32duduk with fade
+    play music crowd volume 0.25
+    pause 3.0
+    stop music fadeout(2.0)
+
+    show ahmad serius at ahmadcenterfix with dissolve
+    
+    
+
+    ahmad "Anda masih menyaksikan cepat capres 2014."
+
+    show ahmad bicara at ahmadcenterfix
+
+    ahmad "Ini saya kira sesi yang paling ditunggu-tunggu."
+    ahmad "Dalam sesi ini kedua capres kembali diberi kesempatan untuk saling tanya dan menanggapi."
+    ahmad "Jadi setelah jawaban pertama diberikan capres yang bertanya dapat menanggapi jawaban."
+    ahmad "Kemudian capres yang bertanya dapat menanggapi jawaban tersebut."
+    ahmad "Waktu untuk bertanya cukup satu menit dan untuk memberikan tanggapan 2 menit."
+    ahmad "Capres nomor urut 2 mendapat kesempatan pertama untuk bertanya"
+
+    
+    ahmad "Bapak Joko Widodo kami berikan waktu 1 menit dimulai dari sekarang."
+
+    scene scene32duduk with fade
+
+    show jokowidebat at centerdebat with easeinleft
+
+    play music investigation fadein 2.0
+
+    j "Terima Kasih."
+    j "Saya ingin bertanya pada Bapak Prabowo."
+    j "Bagaimana pandangan Bapak mengenai pengembangan ekonomi kreatif, karena ini sangat mengurangi banyak sekali pengangguran."
+    j "Terima kasih."
+
+    stop music fadeout 2.0
+
+    ahmadpot2 "Silakan Pak Prabowo 2 menit waktunya dimulai dari sekarang."
+
+    show jokowidebat at leftdebat with ease
+
+    show prabowodebat at rightdebat with easeinright
+    show prabowodebat at rightdebatmaju with ease
+
+    play music suspense volume 0.75 fadein 2.0
+
+    p "Terima kasih Bapak Joko Widodo."
+    p "Ekonomi kreatif adalah sangat penting bagi kita karena tadi jumlah penduduk itu sangat besar dan anak-anak muda kita sangat banyak."
+    p "Kemudian ekonomi kreatif ini adalah bidang Dimana kita bisa bersaing dengan bangsa-bangsa lain."
+    p "Karena itu memang pemerintah siapapun yang memimpin di masa yang akan datang,"
+    p "Harus investasi besar-besaran di bidang pendidikan untuk mendorong kualitas generasi muda kita."
+    p "Sehingga ekonomi kreatif ini bisa menghasilkan suatu nilai tambah bagi bangsa kita."
+    p "Jadi saya sangat mendukung setiap upaya setiap program untuk meningkatkan persaingan kita daya saing kita di bidang ekonomi kreatif."
+    p "Di sini lah mungkin keunggulan bangsa kita karena kita juga punya naluri seni di daerah kita."
+    p "Kita kita punya naluri Seni rakyat kita punya bakat di bidang bidang kreativitas."
+    p "Dan kalau ini diberi kesempatan ini bisa menghasilkan sesuatu devisa yang banyak di alam abad ke-21."
+    p "Dimana sekarang banyak sekali perkembangan teknologi mengarah kepada teknologi Maya teknologi telematika."
+    p "Saya sangat mendorong pembangunan ekonomi kreatif."
+
+    ahmadpot "Pak Joko Widodo silakan menanggapi waktunya mulai sekarang."
+
+    menu:
+            jpot "Prospek Ekonomi Kreatif indonesia kedepannya ialah...."
+
+            "Musik, Animasi, Pertunjukan Video, Produk-Produk Kreatif Design.":
+
+                jump ekonomikreatif
+
+
+            "Ekonomi Kreatif melalui Game.":
+
+                jump jokowigamer
+
+label ekonomikreatif:
+    stop music fadeout 2.0
+    $ debat_point +=2
+    show prabowodebat at rightdebat with ease
+    show jokowidebat at leftdebatmaju with ease
+    pause 2.0
+
+    play music objection fadein 3.0
+
+    j "Bidang-bidang ekonomi kreatif seperti musik, animasi kemudian seni, pertunjukan kemudian video, kemudian produk-produk kreatif desain,"
+    j "Bisa desain produk yang kita ini mempunyai kekayaan yang sangat banyak."
+    j "Ini ruang-ruangnya belum diberikan dukungan penuh oleh pemerintah."
+    j "Dan kita melihat kalau ini diberikan dukungan yang penuh oleh pemerintah ekonomi kreatif ditanyakan bisa dikembangkan."
+    j "Saya berikan contoh, seni pertunjukan kita mempunyai budaya dari Sabang sampai Merauke yang luar biasa banyaknya."
+    j "Kalau itu dikerjakan dengan manajemen panggung yang dikerjakan dengan manajemen lighting yang baik dikerjakan dengan manajemen promosi yang baik."
+    j "Saya kira bisa menjadi kekayaan pariwisata kita yang bisa kita tunjukan pada dunia."
+    j "Animasi juga sama. Animasi kita ini banyak kita export ke luar banyak sekali kita ikut keluar, tetapi yang menikmati banyak bukan kita."
+    j "Karena pemandangan yang ada disini perusahaannya perusahaan-perusahaan dari luar."
+
+    jump chapter2_5_1
+
+label jokowigamer:
+    stop music fadeout 2.0
+    $ jokowigamer = True
+    $ jokowi_petinju = False
+    $ debat_point +=1
+    pause 2.0
+
+    play music objection fadein 3.0
+
+    show jokowidebat at leftdebatmaju with ease
+    show prabowodebat at rightdebat with ease
+    j "Membangun ekonomi kreatif dapat terbagi di banyak bidang. Contohnya pada Era modern ini ialah Ekonomi Kreatif Game."
+    j "Walaupun Game dapat memberikan dapat negatif pada masyarakat, ruang lingkup game sebenarnya sudah lebih dari sekedar bermain game."
+    j "Contohnya turnamen-turnamen besar di luar negeri telah menghasilkan omset milyaran rupiah untuk pengada dan pemainnya."
+    j "Contoh lainnya ialah sebuah studio indie yang artinya sebuah developer kecil namun mereka tetap menghasilkan profit yang sangat besar."
+    j "Namun sayangnya ruang-ruangnya belum diberikan dukungan penuh oleh pemerintah."
+    j "Adanya pun pengadaan turnamen-turnamen besar hanya ada di luar negeri tetapi belum di Indonesia, karena pengadaan itu hanya dari organasi-organisasi kecil."
+
+    jump chapter2_5_1
+
+label chapter2_5_1:
+
+    j "Oleh sebab itu saya ingin kembali menyampaikan kepada Bapak Prabowo Bagaimana ekonomi kreatif ini bisa dibawa ke mancanegara."
+    j "Karena ini menyangkut anak-anak muda semuanya."
+    j "Yang bekerja di ekonomi kreatif anak-anak muda kita umur 20 umur, 25 umur, umur 30, semuanya banyak yang bekerja di bidang ekonomi kreatif ini."
+    j "Terima kasih"
+
+    ahmadpot "Pak Prabowo silakan menanggapi. Waktunya mulai sekarang."
+
+    show jokowidebat at leftdebat with easeinleft
+
+    show prabowodebat at rightdebatmaju with easeinright
+    p "Baik saudara Joko Widodo dan saudara-saudara sekalian."
+    stop music fadeout 2.0
+    p "Ini tim penasehat saya mengatakan apapun nanti jangan pernah setuju dengan yang disampaikan Saudara Joko Widodo."
+    p "Jangan pernah setuju itu nasehat. Tapi saya ini bukan politisi profesional."
+    p "Saya kalau ide yang bagus saya harus bilang bagus jadi saya tidak dengar."
+    p "Saya tidak mau dengar penasehat saya saya sejalan dengan saudara Joko Widodo."
+    "Prabowo berdiri dan berjalan ke arah Jokowi..."
+    play music choice
+    scene scene32duduk with dissolve
+    menu:
+
+            jpot "Saya..."
+
+            "Berjabat tangan dengan Bapak Prabowo":
+
+                jump berjabat
+
+
+            "Menolak tawaran Bapak Prabowo":
+
+                jump menolak
+
+label berjabat:
+    window hide
+    stop music fadeout 1.5
+    scene flagsalaman with fade
+    play music noisy volume 1 fadein 1.0
+    play audio cheer1 volume 0.25 fadein 2.0
+    play audio clap2 volume 0.25 fadein 2.0
+    pause 5.0
+    scene scene32duduk with fade
+
+    show prabowodebat at rightdebat
+    show jokowidebat at leftdebat
+    with dissolve
+    show prabowodebat at rightdebatmaju with ease
+
+    show prabowodebat at rightdebatmaju with vpunch
+    window show
+    p "Dan, bagaimana? Masa harus tidak setuju? Kalau yang idenya Bagus nggak setuju?"
+    p "Maaf ya kali ini nggak ikutin penasehat saya."
+    p "Dan saudara-saudara kalau ekonomi kreatif, Saya hanya punya anak satu dan anak saya memang bergerak di ekonomi kreatif."
+    p "Dan dia sebagai desainer dia juga sudah muncul di mancanegara ya. Jadi ya saya kalau soal itu ya terima kasih. Saya dukung saudara Joko Widodo."
+    p "Terima kasih."
+    stop music fadeout 2.0
+    show prabowodebat at rightdebat with ease
+
+    scene scene32duduk with dissolve
+
+    ahmadpot "Baik, Terima Kasih."
+    play music question fadein 2.0
+    ahmadpot "Kini Pak Prabowo Subianto kami berikan kesempatan untuk bertanya."
+    ahmadpot "Waktunya 1 menit, dimulai dari sekarang."
+
+    show prabowodebat at rightdebat
+    show jokowidebat at leftdebat
+    with dissolve
+
+    show prabowodebat at rightdebatmaju with ease
+    p "Saudara Joko Widodo... {w} Kita tahu sebentar lagi negara kita akan kemasukan atau bukan kemasukan... "
+    p "Harus menerima arus dari tetangga-tetangga kita Asian Economic Community, Komunitas Ekonomi ASEAN tahun 2015 harus kita terima."
+    p "Sudah kita setujui dan banyak dampaknya. Juga banyak sekali Nanti orang Asian boleh berusaha di Indonesia boleh bekerja di sini."
+    p "Saya mohon pandangan Bapak Bagaimana menurut bapak cara menghadapi Asian Economic Community ini."
+    stop music fadeout 3.0
+    p "Apa kita harus tinjau kembali atau bagaimana pemikiran Bapak."
+    show prabowodebat at rightdebat with ease
+
+    #add option here
+    ahmadpot "Silakan Pak Joko Widodo ditanggapi waktunya mulai sekarang."
+
+    show jokowidebat at leftdebatmaju with ease
+
+    play music question2 fadein 2.0
+
+    j "Ya, Terima kasih"
+    j "Ya ini sebuah fakta yang harus kita hadapi tahun depan, ASEAN Economic Community sudah di hadapan kita."
+    j "Tetapi saya menyakini dengan ekonomi kita yang tumbuh baik dengan entrepreneur kita juga tumbuh sangat bagus"
+    j "Keberanian-keberanian untuk menerobos ke pasar global juga sudah dilakukan lebih dari 25/30 tahun yang lalu."
+    j "Buat kita tidak ada masalah, hanya pemerintah harus memberikan dorongan agar mereka menyerang lebih dahulu."
+    j "Masuk ke negara lain terlebih dahulu. Ini strategi."
+    j "Yang kedua, pasar yang ada di domestik jangan sekali-sekali bisa dimasuki oleh pacar dari luar."
+    j "Caranya seperti apa? saya banyak sekali."
+    j "Hal-hal yang berkaitan dengan perizinan misalnya"
+    j "Saya ke daerah bisa memberikan kecepatan apabila memang itu adalah investor lokal investor domestik."
+    j "dan Kalau yang di luar ya nggak papa lah, dak papa lah sedikit-sedikit disulitin"
+    play audio laugh volume 0.5 fadein 2.0
+    j "Inilah saya kira, memang semua semua negara melakukan itu. Ada barier."
+    j "Mereka menghambat tetapi tidak kelihatan, dan ini saya kira tidak usah lewat sebuah intruksi."
+    j "Saya kira semua orang tahu bahwa kita dengan nasionalisme kita dengan ekonomi Berdikari kita Saya kira kita bisa melakukan itu."
+    j "Dan jangka panjang tadi di depan sudah saya sampaikan hanya ada satu cara pembangunan manusia."
+    j "Itulah yang akan menjadi daya saing kita."
+    j "Produktivitas kita dan itulah nanti yang akan menentukan kita menang atau tidak menang di dalam pertarungan Di pasar."
+    j "Saya kira itu Terima kasih."
+    show jokowidebat at leftdebat with ease
+
+    ahmadpot "Pak Prabowo silakan menanggapi waktunya mulai sekarang."
+
+    show prabowodebat at rightdebatmaju with ease
+
+    p "Jadi kalau rincinya, bagaimana nanti bapak mensikapi umpamanya tuntutan daripada perusahaan-perusahaan dari luar."
+    p "Sebagai contoh ingin membuka cabang-cabang bank di Kabupaten-Kabupaten kita satu atau bahwa kita harus membuka Wilayah udara kita."
+    p "Jadi nanti penerbangan-penerbangan Asian bebas terbang di antara kota-kota Indonesia."
+    p "Ini Apakah tidak akan merugikan kepentingan nasional kita?"
+    p "Terima kasih."
+
+    show prabowodebat at rightdebat with ease
+
+    ahmadpot "Joko Widodo tanggapan Anda mulai dari sekarang."
+
+    show jokowidebat at leftdebatmaju with ease
+
+    j "Ya tentu saja kita sebagai pemerintah harus membuat regulasi regulasi yang memberikan barrier agar mereka tidak secara gampang masuk wilayah-wilayah kita."
+    j "Sebagai contoh Tadi masalah hal yang berkaitan dengan perbankan."
+    j "Saya kira BE mempunyai regulasi yang bisa memberikan hambatan-hambatan yang bisa memberikan barrier agar mereka tidak gampang sekali masuk ke tempat kita."
+    j "Karena kalau kita lihat, kita mau mendirikan sebuah cabang Bank di negara yang lain tetangga kita itu aja sangat sulit sekali."
+    j "Saya dengar langsung dari beberapa perbankan mereka, mendirikan perbankan di sana sangat sulit sekali tidak segampang di tempat kita."
+    j "Oleh sebab itu saya kira ada regulasi yang jelas dari pemerintah agar juga hambatan itu ada."
+    j "Kita terbuka tetapi secara tertutup Saya kira hambatan itu harus mulai dibangun."
+    j "Dengan regulasi, dengan peraturan-peraturan, baik pemerintah pusat, baik BI baik, pemerintah daerah."
+    j "Yang utama adalah melindungi ekonomi kita terutama yang berkaitan dengan ekonomi rakyat."
+    j "Tidak bisa udara kita buka total kemudian mereka bisa masuk ke semua daerah"
+    j "Dan yang menguasai daerah nanti bukan pengusaha nasional, tetapi justru pengusaha dari sana."
+    j "Saya kira kepentingan barrier untuk regulasi itu, \"itu\"."
+    j "Jangan sampai memberikan peluang yang besar kepada mereka karena di manapun kita ingin investasi negara manapun pasti ada barriernya."
+    j "Entah lewat regulasi, bisnis entah lewat regulasi pemerintah, entah dihambat di biaya masuk dan yang lain-lainnya."
+    stop music fadeout 3.0
+    j "Terima kasih."
+
+    show jokowidebat at leftdebat with ease
+
+    ahmadpot "Baik, Terima kasih."
+    ahmadpot "Pak Joko Widodo kami berikan waktu 1 menit untuk menyampaikan pertanyaan kedua."
+    ahmadpot "Waktu mulai sekarang."
+
+    show jokowidebat at leftdebatmaju with ease
+    
+    play music suspense 
+    j "Kami mohon klarifikasi atau penjelasan mengenai visi misi Bapak tentang anggaran desa yang disana tercantumkan satu miliar."
+    j "karena yang saya tahu di undang-undang desa itu tidak angka tidak ada angka satu miliar tetapi justru lebih dari ini."
+    j "Bisa 1,4 bisa 1,3 bisa 1,2, tergantung Luas wilayah tergantung penduduknya dan tergantung kemiskinan yang ada di daerah itu."
+    j "Terima kasih"
+
+    show jokowidebat at leftdebat with ease
+
+    ahmadpot "Pak Prabowo Silakan menjawab waktu mulai sekarang."
+
+    show prabowodebat at rightdebatmaju with ease
+
+    p "Baik saya mencanangkan program itu dan saya buat deklarasi itu sebelum undang-undang dasar keluar."
+    p "Jadi saya sebagai ketua umum himpunan kerukunan Tani Indonesia juga didesak, saya juga dewan penasehat dari induk Koperasi Unit Desa didesak."
+
+    scene sceneprabowospeech3 with dissolve
+
+    show prabowodebat at centerdebat
+
+    p "Mereka sudah sebutuhnya 7 tahun di DPR apdesi organisasi desa ini, apdesi parade Nusantara ppdi, sudah 7 tahun di DPR RI."
+    p "Dan setiap tahun dibilang masuk depan, masuk program tahun depan."
+    p "Jadi tanggal 26 Oktober 2013 saya bikin deklarasi itu saya umumkan saya sebarkan itu memacu semua fraksi di DPR RI dan akhirnya keluar undang-undang Desa."
+    p "Tetapi undang-undang Desa keluar masih harus diikuti tentunya oleh peraturan pemerintah dan sebagainya."
+    p "Inilah yang saya saya pacu. Jadi kalau di atas 1 miliar ya Alhamdulillah."
+    p "Kalau dihitung kurang dari 1 miliar kita akan lengkapi karena saya katakan minimal 1 miliar."
+    stop music fadeout 3.0
+    p "Dan hitungan kita anggaran kita mampu untuk melaksanakannya. Terima kasih."
+
+    scene scene32duduk with dissolve
+    show jokowidebat at leftdebat
+    show prabowodebat at rightdebat
+    with dissolve
+
+    ahmadpot2 "Pak Jokowi silakan menanggapi waktu mulai sekarang."
+
+    window show
+
+    #optionsupposedtobhere
+
+    show jokowidebat at Shake((0.215, 0.445, 0.5, 0.5), 1.0, dist=2)    
+    play music pursuit2 volume 0.6 fadein 2.0
+    #show animation
+    #show flash
+    j "Berarti artinya bukan 1 Miliar ya Pak Prabowo." 
+    j "Ya karena siapa pun nanti, siapa pun nanti apa siapa pun nanti presidennya."
+    j "Karena memang sudah menerapkan undang-undang itu juga secara otomatis,"
+    j "Bahwa anggaran sebesar yang tadi saya sampaikan sebesar 1 bisa 1,1 bisa 1,2 bisa 1,3 itu tetap akan mengucur ke desa."
+    j "Desa artinya yang ingin saya sampaikan bahwa visi misi mengenai anggaran Desa satu miliar itu berasal dari undang-undang bukan dari visi misi Bapak Prabowo."
+    j "Terima kasih."
+
+    show jokowidebat at leftdebat with ease
+
+    ahmadpot "Pak Prabowo silahkan menanggapi, waktunya mulai sekarang."
+
+    show prabowodebat at rightdebatmaju with ease
+
+    p "Saya tidak mempersoalkan berasal dari mana yang penting uangnya sampai ke rakyat di desa."
+    play audio clap1 volume 0.25
+    p "Karena ini perjuangan rakyat Desa 7 tahun. Mereka kirim delegasi 7 tahun berturut-turut."
+    p "Jadi saya bikin deklarasi dan dalam visi itu adalah komitmen-komitmen."
+    p "Perkara sudah ada undang-undang Desa Alhamdulillah. Kalau nanti angkanya tidak sampai satu miliar,"
+    p "pemerintah Prabowo Subianto dan Hatta Rajasa kita akan bekerja keras supaya bisa sampai 1 miliar atau lebih itu komitmen kami,"
+    show prabowodebat at rightdebat with ease
+
+    ahmadpot2 "Waktunya masih ada."
+    show prabowodebat at rightdebatmaju with ease
+    p "Ya kalau sudah selesai?"
+    ahmadpot "Oke."
+    p "Saya singkat jelas."
+    play audio clap1 volume 0.5
+    show prabowodebat at rightdebat with ease
+    ahmadpot "Terima kasih."
+    p "Karena yang capek kita Pak, mereka hanya duduk mendengar aja gitu."
+    play audio clap1 volume 0.3
+    stop music fadeout 2.0
+
+    
+    ahmadpot "Terima kasih selanjutnya Pak Prabowo kami berikan kesempatan untuk menyampaikan pertanyaan kedua."
+    queue audio clap1 volume 0.1
+    ahmadpot "Waktunya dimulai dari sekarang."
+
+    show prabowodebat at rightdebatmaju with ease
+
+    play music question2 volume 0.75
+
+    p "Saudara Joko Widodo, kita mengerti bahwa ada kontrak-kontrak dari perusahaan asing bersama Indonesia yang agak merugikan kita, agak merugikan bangsa Indonesia."
+    p "Bagaimana menurut Pak Joko Widodo harus kita sikapi? Apa kita biarkan atau kita melakukan tindakan-tindakan tertentu? Saya mohon."
+
+    show prabowodebat at rightdebat with ease
+
+    ahmadpot "Pak Joko Widodo jawaban dimulai dari sekarang."
+
+    show jokowidebat at leftdebatmaju with ease
+
+    j "Terima kasih Pak Prabowo."
+    j "Kita harus menghormati semua kontrak yang sudah ditandatangani. Tidak bisa ujug-ujug kita ambil, kan tidak mungkin."
+    j "Oleh sebab itu penghormatan terhadap kontrak yang di telah disepakati itu merupakan pembangunan kepercayaan bagi investasi di negara ini."
+    j "Tetapi Kalau nantinya sudah habis tentu saja kita akan kalkulasi kembali, kita akan hitung kembali."
+    j "Apakah akan kita ambil kalau memang menguntungkan kita ambil ya kan kita ambil tentu saja."
+    j "Apakah yang mengambil itu bbm-an Ya silakan atau mereka akan kerjasama juga silakan."
+    j "Tetapi yang paling penting menurut konstitusi bahwa kekayaan alam itu sebesar-besarnya digunakan untuk kemakmuran rakyat, intinya di sana."
+    j "Oleh sebab itu yang paling penting ada di kalkulasi, yang paling penting adalah dihitung."
+    j "Apakah kerjasama dengan BUMN Apakah diambil total oleh BUMN Semuanya perlu dikalkulasi."
+    j "Kita tidak bisa mengeneralisir, karena ini ada masalah yang berkaitan dengan sebuah kontrak."
+    j "Tetapi saya setuju bahwa kekayaan alam itu harus digunakan sebesar-besarnya bagi kemakmuran rakyat"
+    j "Dan harus menguntungkan negara, bukan menguntungkan negara asing."
+    j "Terima Kasih"
+
+    show jokowidebat at leftdebat with ease
+
+    ahmadpot "Oke, Pak Prabowo tanggapan Anda dimulai dari sekarang."
+
+    show prabowodebat at rightdebatmaju with ease
+
+    p "Jadi saudara Jokowi Bagaimana dengan kontrak yang sangat merugikan kita tapi masih jangka jangkanya masih sangat panjang ke depan?"
+    p "Apakah kita tunggu 20 tahun lagi sampai selesai dengan kehilangan nilai tambah kekayaan bagi bangsa Indonesia atau ada langkah lain?"
+    p "Apakah tidak sebaiknya kita adakan perundingan ulang kita minta re-negosiasi?"
+    p "Apakah tidak lebih lebih baik kita re-negosiasi kontrak-kontrak yang tidak menguntungkan bangsa Indonesia?"
+    p "Terima kasih."
+
+    show prabowodebat at rightdebat with ease
+
+    ahmadpot "Silakan Pak Joko Widodo untuk memberikan tanggapan mulai dari sekarang."
+
+    show jokowidebat at leftdebatmaju with ease
+
+    j "Ya, saya ini kan belum membuka kontraknya."
+    j "Kalau kontraknya sudah kita buka kemudian jelas poin-poinnya ada di situ jelas kemudian ada peluang untuk me re-negoisasi ulang."
+    j "Saya akan segera kita lakukan itu. Kalau kita misalnya di dalam kontrak itu jelas bisa kita beli sekarang,"
+    j "Ya, kalau punya kemampuan BBM kita punya kemampuan Kenapa tidak kita beli sekarang kalau memang itu secara itung-itungan menguntungkan."
+    j "Tetapi kalau di dalam kontrak itu memang tidak ada peluang, clause di situ tidak bisa negoisasi."
+    j "Ya, kita harus memberikan penghormatan terhadap kontra itu"
+    j "Tetapi menurut saya yang paling penting sekali lagi bahwa setiap kontrak yang ada ke depan memang harus dilakukan secara detil."
+    j "Jangan sampai ada kerugian kerugian di pihak kita."
+    j "Jangan sampai entah yang namanya royalti, yang namanya pembagian keuntungan entah yang nanya pajak Minerba."
+    j "Itu negara dirugikan rakyat tidak mendapatkan hasil dari sana."
+    j "Kembali ke konstitusi bahwa Kekayaan alam harus sebesar-besarnya digunakan untuk kemakmuran rakyat. Arahnya ke sana."
+    j "Oleh sebab itu kontrak yang akan habis kontrak yang mungkin jauh hari juga akan habis tetap harus disiapkan dari sekarang."
+    j "Tetap harus dikalkulasi tetap dihitung mulai dari sekarang."
+    j "Apakah dia atau dikerjasamakan atau mau di beli oleh BUMN."
+    j "Saya kira inilah apa fakta yang harus kita hadapi dan kita segera siap untuk mengelola tambang tambang itu."
+
+    stop music fadeout 3.0
+
+    scene scene32duduk with fade
+
+    ahmadpot "Baik terima kasih"
+    ahmadpot "Terima kasih bapak-bapak pemirsa."
+    ahmadpot "Debat Capres 2014 akan kembali setelah jeda Pariwara berikut Tetaplah bersama kami."
+
+    jump chapter2_6
+
+label chapter2_6:
+
+    scene black with dissolve
+    show extrashade
+
+    show text "{=chapter_intro}DEBAT SESI TERAKHIR\nPERNYATAAN TERTUTUP{/=chapter_intro}" with Dissolve(1):
+            xalign 0.5 yalign 0.5
+    pause 1.5
+
+    play music enddebat volume 0.5 fadein 2.0
+    scene scene32duduk with fade
+
+    ahmadpot "Kita telah menjalani 5 sesi debat dengan sangat hidup dan menarik. Sekarang kita tiba pada sesi terakhir debat malam hari ini."
+    ahmadpot "Di mana para kandidat akan menyampaikan pernyataan tertutup dalam 3 menit."
+    ahmadpot "Kesempatan pertama kami berikan kepada capres nomor urut 1 Bapak Prabowo Subianto"
+    ahmadpot "Pak Prabowo kami persilahkan, waktu 3 menit dimulai dari sekarang."
+
+    scene scene32prabowo with dissolve
+
+    show prabowodebat at centerdebat with dissolve
+
+    p "Terima kasih saudara moderator."
+    p "Baru saja Malam ini saya dengan saudara Joko Widodo membahas pemikiran-pemikiran kita tentang ekonomi dan kesejahteraan rakyat."
+    p "Perjuangan Kami Prabowo dan Hatta memang ingin mewujudkan suatu ekonomi yang kuat yang berdiri diatas kaki kita sendiri"
+    p "Yang mengamankan kekayaan Negara"
+    p "Supaya bangsa Indonesia menguasai kekayaannya dan agar kekayaan Indonesia tidak mengalir keluar negeri."
+    p "Uang ini Kekayaan ini akan kita pergunakan untuk kepentingan rakyat kita,"
+    p "Untuk mempercepat pembangunan, untuk menaikkan penghasilan buruh tani, nelayan, pedagang kecil, pegawai negeri,"
+    p "Pedagang kaki lima, Guru-guru termasuk guru honorer yang penghasilannya sangat sangat rendah."
+    p "Juga karyawan pabrik yang tidak menentu masa depannya karena {i}outsourcing{/i}."
+    p "Juga mereka-mereka kaum disabilitas, ini semua harus kita bantu."
+    p "Dari mana uang untuk membantu? Dari kekayaan negara yang harus kita amankan."
+    p "Apabila kita diberi mandat kita akan bekerja keras!"
+    p "Agar setiap Ibu tiap pagi senyum melihat anak-anaknya berangkat ke sekolah dengan sehat dengan gembira dapat kembali dari sekolah."
+    p "Juga dengan semangat ibu-ibu akan tahu bahwa guru-gurunya mendidik anak-anaknya dengan baik."
+    p "Bapak-bapaknya, tiap malam tidur dengan tenang, karena tahu besok ada uang untuk anak dan istrinya."
+    p "Lusa masih ada uang, minggu depan masih bisa bayar hutang hutangnya."
+    p "Saudara-saudara Itu perjuangan kami kami ingin orang kecil di Indonesia bisa senyum."
+    p "Wong cilik iso gemuyu itu adalah cita-cita Prabowo Subianto dan Hatta Rajasa."
+    hide prabowodebat with dissolve
+    scene prabowofinal with fade
+    #maybe add pot
+    p "Kita ingin ekonomi untuk rakyat, kemakmuran untuk rakyat."
+    p "Indonesia kuat, Indonesia berdiri diatas kaki kita sendiri, Indonesia dihormati karena rakyatnya Sejahtera."
+    p "Itu cita-cita kami Dan itu yang akan diperjuangkan."
+    p "Kami akan hormati keputusan rakyat kami mohon doa restu kepada seluruh rakyat Indonesia. Selesai."
+    play audio clap1 volume 0.5
+    play audio cheer1 volume 0.3
+
+    scene scene32duduk with dissolve
+
+    show ahmad serius at ahmadcenterfix with dissolve
+    ahmad "Terima kasih, Pak Prabowo."
+    show ahmad bicara at ahmadcenterfix
+    ahmad "Selanjutnya capres nomor urut 2 Bapak Joko Widodo kini giliran anda untuk menyampaikan pernyataan penutup dalam 3 menit."
+
+    ahmad "Mulai dari sekarang."
+    hide ahmad serius with dissolve
+
+    scene scene32jokowi with dissolve
+    show jokowidebat at centerdebat with dissolve
+    j "Ibu dan Bapak sekalian saudara-saudara sebangsa dan setanah air."
+    j "Kami yakin.{w} Kami yakin{w}. Bawa ke depan.{w} Akan terwujud sebuah ekonomi yang lebih baik dan apabila."
+    j "Akan terwujud sebuah ekonomi yang lebih baik dan apabila."
+    j "Kami ingin bekerja sekuat tenaga bekerja siang dan malam untuk mengabdikan diri kepada nusa bangsa dan rakyat Indonesia."
+    j "Kita sering bertemu...{w} Rakyat di Aceh...{w}Di Papua...{w} Di Sangihe, di Rote yang bekerja pada malam hari di saat kita tidur."
+    j "Itulah yang menggugah kami mengubah Jokowi-JK untuk bekerja keras mengabdikan diri."
+    j "Kepada jutaan rakyat.{w} Di Indonesia."
+    j "Saya Joko Widodo.{w} Saya lahir di sini.{w} Saya besar di sini.{w} Saya di didik di sini.{w}."
+    j "Dan saya, dan saya seutuhnya adalah Indonesia. Saya tegaskan, Saya dan Pak JK siap memimpin Indonesia."
+    j "Dan Saya tegaskan bahwa saya hanya tunduk kepada konstitusi hanya tunduk kepada kehendak rakyat.{w} Rakyat Indonesia."
+    scene jokowifinal with fade
+    #maybe add pot
+    j "Salam Dua Jari."
+    play audio clap1 volume 0.3
+    j "Terima kasih."
+    play audio clap2 volume 0.75
+    play audio cheer1 volume 0.75
+
+    scene scene32duduk with fade
+    show ahmad serius at ahmadcenterfix with dissolve
+
+    ahmad "Terima kasih Pak Joko Widodo."
+    #peoplecheeringojokowi
+    show ahmad bicara at ahmadcenterfix with dissolve
+    ahmad "Ya itu tadi Debat Capres 2014 putaran kedua."
+    ahmad "Sekali lagi terima kasih kepada Pak Prabowo Subianto dan Pak Joko Widodo."
+    ahmad "Terima kasih juga kepada para hadirin di ruangan ini dan pemirsa dimanapun anda berada."
+    ahmad "Saya Ahmad erani Yustika debat selanjutnya akan dilaksanakan pada tanggal 22 Juni 2014. "
+    ahmad "Jangan lupa untuk menggunakan hak pilih Anda pada tanggal 9 Juli 2014."
+    ahmad "Karena suara anda menentukan siapa yang memimpin bangsa ini 5 tahun kedepan."
+    ahmad "Selamat malam dan sampai jumpa."
+    stop music fadeout 3.0
+    hide ahmad bicara with dissolve
+
+    scene scene33 with fade
+    announcer "Kami persilahkan kepada calon wakil presiden nomor urut 1 dan 2 untuk naik ke atas panggung."
+    scene scene34 with dissolve
+    announcer "Hadirin sekalian kami mohon untuk berdiri menyanyikan lagu Bagimu Negeri."
+
+    "Debat Capres 2014, Gran Melia. Berakhir"
+
+
+    scene black with dissolve
+
+    show text "{=chapter_intro}EPILOG{/=chapter_intro}" with Dissolve(1):
+            xalign 0.5 yalign 0.5
+    pause 1.5
+    scene black with dissolve
+
+label ending_evaluate:
+    if debat_point == 8:
+        jump true_ending
+    elif debat_point < 8 and jokowi_petinju == True:
+        jump petinju_end
+    elif debat_point < 8 and jokowigamer == True:
+        jump gamer_end
+    else:
+        jump alternateend
+
+
+label true_ending:
+    
+    scene black with fade
+    $ trueend = True
+    $ persistent.truendmenu == True
+    "Mei 2014"
+    play music cinema_ambient fadein 3.0
+    scene end1_1 with dissolve
+    j "Saya dan Pak Jusuf Kalla akhirnya memenangkan pertarungan yang sangat emosional itu."
+    j "Setelah melalui perdebatan hasil pilpres, kami akhirnya diakui secara sah sebagai pemenang pilpres."
+    j "Luar biasa gegap gempita teriakan pendukung yang menyambut kemenangan saya dan Pak Jusuf Kalla."
+    j "Ibu Megawati menggelar temu pers di rumahnya di Jagakarsa, Jakarta Selatan."
+    j "Halaman rumah itu penuh sesak. Semua pendukung utama selama masa kampanya hadir, juga para pimpinan PDIP serta partai pendukung lainnya."
+    j "Di antara gegap gempita susana di rumah Ibu Megawati, perasaaan saya berkalana di dalam lorong sunyi batin saya."
+    j "Saya tahu bahwa di depan nanti akan ada tantangan yang akan saya hadapi luar biasa dashatnya."
+    j "Saya bukan lagi memimpin Solo dan Jakarta."
+    j "Tapi, Indonesia, negara dengan penduduk lebih dari 260 juta jiwa, memliki 17 ribu pulau, 714 suku, dan 34 provinsi."
+    j "Kita bangsa yang hebat."
+    j "Kita pasti bisa menciptakan perubahan yang baik."
+    j "{cps=10}Salam dari Joko Widodo.{/cps}"
+    $ quick_menu = False
+    #$ _game_menu_screen = None
+    #$ _dismiss_pause = False
+    #$ _skipping = False
+    #$ _rollback = False
+    $ quick_menu = False
+    window hide
+    
+    scene black with fade
+    
+    call credits
+
+    show extrashade
+    return
+
+label credits:
+    $ credits_speed = 25 #scrolling speed in seconds
+    scene scene30
+    with dissolve
+    pause 2.0
+    show extrashade
+    hide stticred
+    scene expression "#000" with dissolve
+    show cred at Move((0.5, 3.0), (0.5, 0.0), credits_speed, repeat=False, bounce=False, xanchor="center", yanchor="bottom")
+    with Pause(credits_speed)
+    scene white with fade
+    show stticred:
+        yanchor 0.5 ypos 0.5
+        xanchor 0.5 xpos 0.5
+    with dissolve
+    with Pause(2)
+    if trueend == True:
+        scene end1_3 with fade
+        "Selamat dan terima kasih karena telah menyelesaikan Biografi Jokowi Widodo."
+        "Visual Novel Novel Jokowi Berakhir."
+        jump end1
+
+    elif petinjuend == True:
+        scene end2_2 with fade
+        "Terima kasih karena telah menyelesaikan Biografi Jokowi Widodo."
+        "Visual Novel Novel Jokowi Berakhir."
+        jump end2
+    elif gamerend == True:
+        scene end3_2 with fade
+        "Terima kasih karena telah menyelesaikan Biografi Jokowi Widodo."
+        "Visual Novel Novel Jokowi Berakhir."
+        jump end3
+    else:
+        scene end4
+        "Terima kasih karena telah menyelesaikan Biografi Jokowi Widodo."
+        "Visual Novel Novel Jokowi Berakhir."
+        jump end4
+    #scene end1_3 with fade
+    
+label end1:
+    show extrashade with dissolve
+    show text "{=chapter_intro}JOKOWI TRUE END{/=chapter_intro}":
+            xalign 0.5 yalign 0.5
+    pause 2.0
+
+    return
+
+label end2:
+    show extrashade with dissolve
+    show text "{=chapter_intro}JOKOWI PETINJU END{/=chapter_intro}":
+            xalign 0.5 yalign 0.5
+    pause 2.0
+
+    return
+
+label end3:
+    show extrashade with dissolve
+    show text "{=chapter_intro}JOKOWI GAMER END{/=chapter_intro}":
+            xalign 0.5 yalign 0.5
+    pause 2.0
+
+    return
+
+label end4:
+    show extrashade with dissolve
+    show text "{=chapter_intro}JOKOWI ALTERNATE END{/=chapter_intro}":
+            xalign 0.5 yalign 0.5
+    pause 2.0
+
+    return
+
+
+
+label petinju_end:
+    $ petinjuend = True
+    scene end2_1 with fade
+
+    "Di Suatu taman di Indonesia"
+    "Terdengar Suara orang sedang adu Tinju"
+    j "Huah! Huah! Huah"
+
+    scene end2_2 with dissolve
+    pause 2.0
+    show extrashade
+
+    play music difficult fadein 1.0
+
+    "Jokowi terlihat sedang latihan olahraga bersama dengan rekannya."
+    "Setelah masa pertempuran kampanye itu."
+    "Jokowi kalah tipis dengan Calon Presiden Nomor 1 yaitu Bapak Prabowo Widodo."
+    "Namun Joko Widodo tidak pantang menyerah dan terus melanjutkan kegiatannya."
+    "Salah satu kegiatan tersebut ialah menjadi pelatih petinju."
+    "Jokowi yakin bahwa kedepannya bahwa dia dapat menjadi Capres sekali lagi demi memimpin rakyat dan Menjadi Presiden."
+
+    $ quick_menu = False
+    window hide
+
+    call credits
+
+    show extrashade
+    show text "{=chapter_intro}JOKOWI PETINJU END{/=chapter_intro}" with fade:
+            xalign 0.5 yalign 0.5
+
+    return
+
+label gamer_end:
+    $ gamerend = True
+
+    scene end3_1 with fade
+
+    play music suspicious fadein 1.0
+
+    "Jokowi terlihat sedang bermain game."
+    "Ia sedang bermain Clash of Clans."
+    "Sayang walaupun kalah dalam Pilpres dengan beda yang sangat tipis, ia tetap menjalankan tugasnya sebagai seorang politikus dan pengusaha."
+    "Tidak lupa juga ia mengingat bahwa terdapat seni dalam bentuk game."
+    "Tidak hanya untuk rekreasi atau hiburan, game juga dapat berupa ekonomi kreatif juga dikembangkan dengan baik."
+
+    scene end3_2 with dissolve
+
+    "Oleh karena itu Jokowi mulai mendukung banyak perusahaan-perusahaan ataupun bakat di Indonesia dalam ekonomi kreatif yang berupa industry game."
+    "Tidak lupa juga dia membeli game-game tersebut."
+    "Mungkin... {w} suatu hari dia juga akan mendirikan perusahaan game yang sangat sukses dan menghasilkan profit triliunan rupiah dengan nama yang baik."
+
+    $ quick_menu = False
+    window hide
+    
+    call credits
+
+    show extrashade
+    show text "{=chapter_intro}JOKOWI GAMER END{/=chapter_intro}" with Dissolve(1):
+            xalign 0.5 yalign 0.5
+
+    return
+
+label alternateend:
+    $ normalend = True
+
+    scene black with fade
+    "Setelah masa pertempuran sengit kampanya Pemilihan Presiden 2014."
+
+    scene end4 with dissolve
+
+    play music noisy fadein 2.0
+
+    "Jokowi kalah dalam pertarungan tersebut."
+    "Namun, Jokowi yakin bahwa dia dapat menjadi lebih baik dalam Pemilihan Presiden yang akan datang."
+    "Walaupun ia harus menjalankan pertempuran sengit itu sekali lagi..."
+
+    "Terima Kasih sudah bermain Biografi Visual Novel Joko Widodo. Anda dapat mencoba ulang bagian debat untuk mencari ending yang lebih baik."
+
+    $ quick_menu = False
+    window hide
+
+    call credits
+    
+    show extrashade
+
+    stop music fadeout 5.0
+    show text "{=chapter_intro}JOKOWI ALTERNATE END{/=chapter_intro}" with Dissolve(1):
+            xalign 0.5 yalign 0.5
+
+    return
+
+
+label menolak:
+
+    scene black with dissolve
+    show text "{=monologue}Semenjak saat itu.{/=monologue}" with Dissolve(1):
+            xalign 0.5 yalign 0.5
+    pause 1.5
+    show text "{=monologue}Saya tahun saya membuat pilihan yang salah.{/=monologue}" with Dissolve(1):
+            xalign 0.5 yalign 0.5
+    pause 2.0
+    show text "{=monologue}Karena Bersalamaan merupakan sesuatu yang wajar untuk menghormati Pilihan Bapak Prabowo.{/=monologueo}" with Dissolve(1):
+            xalign 0.5 yalign 0.5
+    pause 2.0
+    scene black with dissolve
+
+    return
